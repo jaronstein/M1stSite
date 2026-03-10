@@ -1,0 +1,32 @@
+{% set cta_map = {
+  "offer": {
+    "line": "This is the exact problem our Offer Creation program is built for.",
+    "sub": "If your product and your competitor's look identical to a first-time visitor — that's a fixable problem."
+  },
+  "personalization": {
+    "line": "Your ads are working. Your landing page is undoing them.",
+    "sub": "Ad-to-Page Content Personalization fixes the mismatch between what your ad promised and what your page delivers."
+  },
+  "discovery": {
+    "line": "60% of your traffic lands on one PDP and can't find what they need.",
+    "sub": "Product Discovery is how we fix the navigation problem nobody talks about."
+  },
+  "zero-party": {
+    "line": "You're showing first-time visitors the same page as loyal customers.",
+    "sub": "Zero-Party Data is how you fix that — without creeping anyone out."
+  },
+  "experimentation": {
+    "line": "You've tested button colors. RPV is still flat.",
+    "sub": "Data-Driven Experimentation means testing things that actually move revenue."
+  },
+  "bi": {
+    "line": "Your GA4 dashboard is telling you a story. We're not sure it's true.",
+    "sub": "Business Intelligence is how you find out what's actually happening."
+  }
+} %}
+
+<aside class="inline-cta inline-cta--{{ cta_type }}">
+  <p class="inline-cta__line">{{ cta_map[cta_type].line }}</p>
+  <p class="inline-cta__sub">{{ cta_map[cta_type].sub }}</p>
+  <a href="/quiz/" class="inline-cta__link">Take the quiz</a>
+</aside>

@@ -1,0 +1,282 @@
+---
+layout: base.njk
+title: Find Your Product — Mobile1st
+description: Answer 5 questions about your business and we'll tell you exactly which Mobile1st program fits — and why.
+---
+
+<section class="quiz-page">
+  <div class="container">
+    <div class="quiz-wrap" id="quizWrap">
+
+      <!-- ── INTRO ── -->
+      <div class="quiz-screen active" id="screen-intro">
+        <span class="section-label">Find Your Fit</span>
+        <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--forest); margin-bottom: 1rem; line-height: 1.2;">Not sure where to start?</h1>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1rem; line-height: 1.65;">Five questions. We'll tell you exactly which product fits your situation — and why.</p>
+        <button class="btn btn-primary-dark btn-lg" id="btnStart">→ Let's Find Out</button>
+      </div>
+
+      <!-- ── Q1 — Revenue range ── -->
+      <div class="quiz-screen" id="screen-q1">
+        <div class="quiz-progress"><div class="quiz-progress-fill" id="prog-q1" style="width:20%"></div></div>
+        <span class="quiz-step-label">Question 1 of 5</span>
+        <h2 class="quiz-question">How much does your brand do online annually?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="under1m">Under $1M</button>
+          <button class="quiz-option" data-value="1m-5m">$1M – $5M</button>
+          <button class="quiz-option" data-value="5m-25m">$5M – $25M</button>
+          <button class="quiz-option" data-value="25m-100m">$25M – $100M</button>
+          <button class="quiz-option" data-value="over100m">Over $100M</button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-btn-back" data-target="screen-intro">← Back</button>
+          <button class="quiz-btn-next" id="q1-next" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- ── Q2 — Traffic source ── -->
+      <div class="quiz-screen" id="screen-q2">
+        <div class="quiz-progress"><div class="quiz-progress-fill" style="width:40%"></div></div>
+        <span class="quiz-step-label">Question 2 of 5</span>
+        <h2 class="quiz-question">Where does most of your traffic come from?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="paid-social">Paid social (Meta, TikTok)</button>
+          <button class="quiz-option" data-value="paid-search">Paid search (Google Shopping, PMax)</button>
+          <button class="quiz-option" data-value="paid-both">Both paid social and paid search</button>
+          <button class="quiz-option" data-value="organic">Mostly organic / email / direct</button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-btn-back" data-target="screen-q1">← Back</button>
+          <button class="quiz-btn-next" id="q2-next" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- ── Q3 — Biggest problem (primary driver) ── -->
+      <div class="quiz-screen" id="screen-q3">
+        <div class="quiz-progress"><div class="quiz-progress-fill" style="width:60%"></div></div>
+        <span class="quiz-step-label">Question 3 of 5</span>
+        <h2 class="quiz-question">Which of these sounds most like your situation?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="q3-ads">My ads are working but my landing pages aren't converting</button>
+          <button class="quiz-option" data-value="q3-offer">My products are good but people aren't choosing us over competitors</button>
+          <button class="quiz-option" data-value="q3-discovery">Shoppers land on my site and can't find what they need</button>
+          <button class="quiz-option" data-value="q3-data">I know nothing about who my visitors actually are</button>
+          <button class="quiz-option" data-value="q3-testing">My conversion rate is fine but RPV isn't growing</button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-btn-back" data-target="screen-q2">← Back</button>
+          <button class="quiz-btn-next" id="q3-next" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- ── Q4 — Testing maturity ── -->
+      <div class="quiz-screen" id="screen-q4">
+        <div class="quiz-progress"><div class="quiz-progress-fill" style="width:80%"></div></div>
+        <span class="quiz-step-label">Question 4 of 5</span>
+        <h2 class="quiz-question">What does your current experimentation program look like?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="active">We run tests regularly and have solid infrastructure</button>
+          <button class="quiz-option" data-value="occasional">We run tests occasionally but not systematically</button>
+          <button class="quiz-option" data-value="not-moving">We have a testing program but it's not moving the needle</button>
+          <button class="quiz-option" data-value="none">We don't run A/B tests</button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-btn-back" data-target="screen-q3">← Back</button>
+          <button class="quiz-btn-next" id="q4-next" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- ── Q5 — Platform ── -->
+      <div class="quiz-screen" id="screen-q5">
+        <div class="quiz-progress"><div class="quiz-progress-fill" style="width:100%"></div></div>
+        <span class="quiz-step-label">Question 5 of 5</span>
+        <h2 class="quiz-question">What platform is your store on?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="shopify">Shopify or Shopify Plus</button>
+          <button class="quiz-option" data-value="bigcommerce">BigCommerce</button>
+          <button class="quiz-option" data-value="sfcc">Salesforce Commerce Cloud</button>
+          <button class="quiz-option" data-value="custom">Custom / headless</button>
+          <button class="quiz-option" data-value="other">Other</button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-btn-back" data-target="screen-q4">← Back</button>
+          <button class="quiz-btn-next" id="q5-next" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- ── EMAIL GATE ── -->
+      <div class="quiz-screen" id="screen-email">
+        <span class="section-label">Almost There</span>
+        <h2 style="font-size: clamp(1.3rem, 2.5vw, 1.65rem); color: var(--forest); margin-bottom: 0.75rem; line-height: 1.25;">Where should we send your result?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 0; font-size: 0.95rem;">We'll email you your personalized recommendation. No spam, ever.</p>
+        <form class="quiz-email-form" id="emailForm" novalidate>
+          <label for="quizEmail" class="sr-only">Your work email address</label>
+          <input
+            type="email"
+            id="quizEmail"
+            class="quiz-email-input"
+            placeholder="you@yourcompany.com"
+            autocomplete="email"
+            required
+          />
+          <p class="quiz-email-error" id="emailError" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary-dark btn-lg">Show My Result →</button>
+        </form>
+        <p class="quiz-email-note">We use this to send your result and reach out if it seems like a fit. That's it.</p>
+        <div class="quiz-nav" style="margin-top:1.5rem; padding-top:0;">
+          <button class="quiz-btn-back" data-target="screen-q5">← Back</button>
+        </div>
+      </div>
+
+      <!-- ── RESULT A — Ad-to-Page Personalization ── -->
+      <div class="quiz-screen quiz-result-screen" id="result-A">
+        <span class="quiz-result-badge">Your Result</span>
+        <h2 class="quiz-result-headline">Ad-to-Page Content Personalization</h2>
+        <p class="quiz-result-body">Your ads are doing their job. Your landing pages aren't keeping up. You're paying to get people to click — and then showing them a generic page that has no idea which ad they came from.</p>
+        <p class="quiz-result-body">The fix is matching your page content to your creative. Headline, hero, value props — automatically updated, A/B tested before it's permanent. We do that for $1,000/month, and the first month is free.</p>
+        <div class="quiz-result-pricing">
+          <strong>$1,000/month</strong> · 4-month minimum · <strong>First month free</strong>
+        </div>
+        <div class="quiz-result-tag quiz-non-shopify-flag" style="display:none">
+          <strong>Note:</strong> We do our deepest work on Shopify, but this program works across platforms. We'll discuss specifics on the call.
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="/#products" class="btn btn-primary-dark">→ Start Free</a>
+          <a href="#" class="btn btn-outline" data-booking-modal>Talk to the Team</a>
+        </div>
+      </div>
+
+      <!-- ── RESULT B — Offer Creation ── -->
+      <div class="quiz-screen quiz-result-screen" id="result-B">
+        <span class="quiz-result-badge">Your Result</span>
+        <h2 class="quiz-result-headline">Offer Creation</h2>
+        <p class="quiz-result-body">Your product is good. Your offer isn't giving people a reason to choose you right now. Competing on price is a short game.</p>
+        <p class="quiz-result-body">We help you build an offer — bundle, guarantee, value-add — that makes your competitors' discounts look like a lack of better ideas. Month 1 we develop the offers. Months 2 and 3 we run experiments to find the best mix. Experimentation is included free.</p>
+        <div class="quiz-result-pricing">
+          <strong>$8,000</strong> · 3-month program · <strong>Experimentation included free</strong>
+        </div>
+        <div class="quiz-result-tag quiz-non-shopify-flag" style="display:none">
+          <strong>Note:</strong> We do our deepest work on Shopify, but this program works across platforms. We'll discuss specifics on the call.
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="/#products" class="btn btn-primary-dark">→ See What's Included</a>
+          <a href="#" class="btn btn-outline" data-booking-modal>Talk to the Team</a>
+        </div>
+      </div>
+
+      <!-- ── RESULT C — Product Discovery ── -->
+      <div class="quiz-screen quiz-result-screen" id="result-C">
+        <span class="quiz-result-badge">Your Result</span>
+        <h2 class="quiz-result-headline">Product Discovery</h2>
+        <p class="quiz-result-body">Your traffic is landing. Your site isn't helping them find what they need. This is a mobile problem first — most product discovery is built for desktop, and on mobile it becomes an obstacle course.</p>
+        <p class="quiz-result-body">We redesign the path from landing to the right product — search, navigation, filters, and on-page guidance. Fixed-price project, scoped after a quick audit.</p>
+        <div class="quiz-result-pricing">
+          <strong>$11,000</strong> · Fixed-price project · Scoped after audit
+        </div>
+        <div class="quiz-result-tag quiz-non-shopify-flag" style="display:none">
+          <strong>Note:</strong> We do our deepest work on Shopify, but this program works across platforms. We'll discuss specifics on the call.
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="/#products" class="btn btn-primary-dark">→ See What's Included</a>
+          <a href="#" class="btn btn-outline" data-booking-modal>Talk to the Team</a>
+        </div>
+      </div>
+
+      <!-- ── RESULT D — Zero-Party Data ── -->
+      <div class="quiz-screen quiz-result-screen" id="result-D">
+        <span class="quiz-result-badge">Your Result</span>
+        <h2 class="quiz-result-headline">Zero-Party Data 90-Day Program</h2>
+        <p class="quiz-result-body">You don't know who your visitors are — and your site is treating everyone the same. Clickstream data tells you what people clicked. It doesn't tell you who they are or what they need.</p>
+        <p class="quiz-result-body">We build a zero-party data program — a short quiz flow on your site — that lets customers tell you who they are. Then we activate that data across your site, email, and SMS. 90 days. $6,000 flat. You own everything.</p>
+        <div class="quiz-result-pricing">
+          <strong>$6,000 flat</strong> · 90-day program · No retainer
+        </div>
+        <div class="quiz-result-tag quiz-non-shopify-flag" style="display:none">
+          <strong>Note:</strong> We do our deepest work on Shopify, but this program works across platforms. We'll discuss specifics on the call.
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="/#products" class="btn btn-primary-dark">→ See What's Included</a>
+          <a href="#" class="btn btn-outline" data-booking-modal>Talk to the Team</a>
+        </div>
+      </div>
+
+      <!-- ── RESULT E — Experimentation ── -->
+      <div class="quiz-screen quiz-result-screen" id="result-E">
+        <span class="quiz-result-badge">Your Result</span>
+        <h2 class="quiz-result-headline">Data-Driven Experimentation</h2>
+        <p class="quiz-result-body">You're making site decisions based on gut feel. That needs to stop. One validated A/B test per month, built from your actual data. RPV as the north star, not just conversion rate.</p>
+        <p class="quiz-result-body">If you don't have a testing program yet — this is the foundation everything else is built on. Business Intelligence is included free so your data is trustworthy before we start testing.</p>
+        <div class="quiz-result-pricing">
+          <strong>$4,000/month</strong> · 4-month minimum · <strong>BI included free</strong> ($1,000/mo value)
+        </div>
+        <div class="quiz-result-tag quiz-non-shopify-flag" style="display:none">
+          <strong>Note:</strong> We do our deepest work on Shopify, but this program works across platforms. We'll discuss specifics on the call.
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="/#products" class="btn btn-primary-dark">→ See What's Included</a>
+          <a href="#" class="btn btn-outline" data-booking-modal>Talk to the Team</a>
+        </div>
+      </div>
+
+      <!-- ── RESULT F — Soft disqualify ── -->
+      <div class="quiz-screen quiz-result-screen quiz-result-screen--soft-disqualify" id="result-F">
+        <span class="quiz-result-badge">Your Result</span>
+        <h2 class="quiz-result-headline">You're building something real — the timing isn't quite right yet.</h2>
+        <p class="quiz-result-body">Our programs are built for brands doing $1M+ online. At your current stage, the bottleneck usually isn't on-site optimization — it's traffic volume and product-market fit. Optimization before those are solid is noise.</p>
+        <p class="quiz-result-body">That said, the free audit is genuinely useful at any stage. We'll tell you what we see. Come back when you're at $1M+ and we'll run a proper program together.</p>
+        <p class="quiz-result-body">In the meantime — subscribe to The E-commerce Director's Cut. It's free and it'll give you a leg up before you need us.</p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="#" class="btn btn-outline" data-booking-modal>Book the Free Audit Anyway</a>
+        </div>
+        <form class="subscribe-form" data-subscribe-form style="margin-top:1rem; flex-direction:row; flex-wrap:wrap; gap:0.5rem;">
+          <input type="email" name="email" class="subscribe-input" placeholder="you@yourcompany.com" required autocomplete="email" style="flex:1; min-width:180px;" />
+          <button type="submit" class="btn btn-outline">Subscribe to The Director's Cut</button>
+        </form>
+        <p class="subscribe-success" style="display:none">You're in. Check your inbox.</p>
+      </div>
+
+      <!-- ── RESULT G — Multiple products / let's talk ── -->
+      <div class="quiz-screen quiz-result-screen" id="result-G">
+        <span class="quiz-result-badge">Your Result</span>
+        <h2 class="quiz-result-headline">Your situation needs a real conversation.</h2>
+        <p class="quiz-result-body">Your answers point in a few different directions at once. That usually means you're at an inflection point where multiple programs could apply — and the right starting point depends on details we'd need to understand first.</p>
+        <p class="quiz-result-body">The free audit is the right next step. 30 minutes. We'll tell you exactly what we think — including which program (if any) makes sense for where you are right now.</p>
+        <div class="quiz-result-tag quiz-non-shopify-flag" style="display:none">
+          <strong>Note:</strong> We do our deepest work on Shopify, but we've worked across platforms. We'll discuss fit on the call.
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="#" class="btn btn-primary-dark" data-booking-modal>→ Book the Free Audit</a>
+        </div>
+      </div>
+
+      <!-- ── CONTACT BLOCK (shown below all results except F) ── -->
+      <div class="quiz-contact-block" id="quiz-contact">
+        <h3>Ready to talk? Tell us a bit more.</h3>
+        <p>Optional — but if you want us to reach out, this gets you in the queue.</p>
+        <form class="quiz-contact-form" id="contactForm">
+          <div class="quiz-form-row">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" name="name" placeholder="Your name" autocomplete="name" />
+          </div>
+          <div class="quiz-form-row">
+            <label for="contactCompany">Company / Store URL</label>
+            <input type="text" id="contactCompany" name="company" placeholder="yourstore.com" />
+          </div>
+          <div class="quiz-form-row">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="email" placeholder="you@yourcompany.com" autocomplete="email" />
+          </div>
+          <div class="quiz-form-row">
+            <label for="contactMessage">Anything else we should know?</label>
+            <textarea id="contactMessage" name="message" rows="3" placeholder="What's on your mind?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary-dark">→ Send It Over</button>
+          <p class="quiz-form-success" id="contactSuccess" style="display:none">Got it. We'll review your site and be in touch within one business day.</p>
+        </form>
+      </div>
+
+    </div><!-- /.quiz-wrap -->
+  </div><!-- /.container -->
+</section>
+
+<script src="/js/quiz.js"></script>

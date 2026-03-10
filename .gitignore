@@ -1,0 +1,18 @@
+# Build output
+_site/
+
+# Dependencies
+node_modules/
+
+# Eleventy cache
+.cache/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Exported data (large, not source code)
+*.xml
+
+# Local Claude settings
+.claude/settings.local.json

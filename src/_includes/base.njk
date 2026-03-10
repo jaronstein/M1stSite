@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or "Mobile1st — Digital Product Growth" }}</title>
+  <meta name="description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
+
+  <!-- Poppins from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!--
+    Obviously font (OH no Type Co) — commercial license required.
+    Purchase at: https://ohnotype.co/fonts/obviously
+    After purchasing, place font files in src/fonts/ and uncomment the @font-face
+    block in src/css/style.css
+  -->
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" href="/img/favicon.ico" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo"><img src="/img/logo.png" alt="Mobile1st" height="48" /></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="/#what-we-do">What We Do</a>
+        <a href="/#products">Products</a>
+        <a href="/#results">Results</a>
+        <a href="/news/">Director's Cut</a>
+        <a href="https://podcast.mobile1st.com" target="_blank" rel="noopener">Podcast</a>
+        <a href="/quiz/" class="nav-cta">Where Should I Start? →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/img/logo.png" alt="Mobile1st" height="32" class="footer-logo" />
+          <p>Digital Product Growth for e-commerce brands doing $5M–$100M online.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/#what-we-do">What We Do</a>
+          <a href="/#products">Products &amp; Pricing</a>
+          <a href="/#results">Results</a>
+          <a href="/#fit">Who We Work With</a>
+          <a href="/news/">Director's Cut</a>
+        </div>
+        <div class="footer-cta">
+          <p>Ready to find your revenue leaks?</p>
+          <a href="/quiz/" class="btn btn-primary">Where Should I Start? →</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ "" | currentYear }} Mobile1st. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="booking-modal-overlay" role="dialog" aria-modal="true" aria-label="Book a time to talk">
+    <div class="booking-modal">
+      <div class="booking-modal-header">
+        <h2>Book a Time to Talk</h2>
+        <button class="booking-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <!-- Google Calendar Appointment Scheduling begin -->
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17zgsYfWZ2Wd4knXkXBfCtc1Iz8xpg8UwQ8v04yrIfOyiw24yQpQT_IQWYSkI2GvWs1ekTjM_Z?gv=true" width="100%" height="600" frameborder="0"></iframe>
+      <!-- end Google Calendar Appointment Scheduling -->
+    </div>
+  </div>
+
+  <!-- Podcast Guest Modal -->
+  <div id="podcast-modal" class="booking-modal-overlay" role="dialog" aria-modal="true" aria-label="Apply to be a podcast guest">
+    <div class="booking-modal">
+      <div class="booking-modal-header">
+        <h2>Apply to Be a Guest</h2>
+        <button class="booking-modal-close" aria-label="Close">&times;</button>
+      </div>
+      <!-- Google Calendar Appointment Scheduling begin -->
+      <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3c_NZNJoZsKaaX9dU_JrxaZlGsWSHrv8b4HU7PZXIRp_8UzHbVW3ZNx7CEy6ofKlSjyYiily12?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+      <!-- end Google Calendar Appointment Scheduling -->
+    </div>
+  </div>
+
+  <script src="/js/nav.js"></script>
+</body>
+</html>

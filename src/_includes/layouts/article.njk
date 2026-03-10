@@ -1,0 +1,90 @@
+---
+layout: base.njk
+---
+
+{% set currentUrl = page.url %}
+{% set prevPost = null %}
+{% set nextPost = null %}
+{% for post in collections.posts %}
+  {% if post.url == currentUrl %}
+    {% if not loop.first %}{% set nextPost = collections.posts[loop.index0 - 1] %}{% endif %}
+    {% if not loop.last %}{% set prevPost = collections.posts[loop.index0 + 1] %}{% endif %}
+  {% endif %}
+{% endfor %}
+
+<article class="post-page">
+
+  <div class="container">
+
+    <div class="post-header">
+      <a href="/news/" class="post-back">← All Posts</a>
+      <div class="post-meta">
+        <span class="post-date">{{ date | readableDate }}</span>
+        {% if author %}<span class="post-author-name">by {{ author }}</span>{% endif %}
+      </div>
+      <h1 class="post-title">{{ title }}</h1>
+      {% if description %}<p class="post-excerpt">{{ description }}</p>{% endif %}
+    </div>
+
+    {% if podcast_episode_id %}
+    <div class="post-podcast-player">
+      <iframe src="https://6838ae27d7d6e1-61780196.castos.com/player/{{ podcast_episode_id }}" width="100%" height="150" frameborder="0" scrolling="no"></iframe>
+    </div>
+    {% endif %}
+
+    <div class="article-body">
+      <div class="article-body__content post-body">
+
+        {% if linkedin_post_url %}
+        <aside class="article-linkedin-bar">
+          <span class="article-linkedin-bar__text">{{ linkedin_cta or "Have a take on this?" }}</span>
+          <a href="{{ linkedin_post_url }}" target="_blank" rel="noopener noreferrer" class="article-linkedin-bar__link">Continue the conversation on LinkedIn →</a>
+        </aside>
+        {% endif %}
+
+        {{ content | safe }}
+
+        {% if inline_cta and inline_cta != "none" %}
+          {% set cta_type = inline_cta %}
+          {% include "components/article-cta-inline.njk" %}
+        {% endif %}
+
+      </div>
+    </div>
+
+  </div>
+
+  {% if show_end_cta != false %}
+    {% include "components/article-cta-end.njk" %}
+  {% endif %}
+
+  <div class="container">
+
+    <div class="post-footer">
+      <a href="/news/" class="btn btn-outline-dark">← Back to All Posts</a>
+    </div>
+
+    {% if prevPost or nextPost %}
+    <nav class="post-nav" aria-label="Post navigation">
+      {% if prevPost %}
+      <a href="{{ prevPost.url }}" class="post-nav-link post-nav-link--prev">
+        <span class="post-nav-label">← Older</span>
+        <span class="post-nav-title">{{ prevPost.data.title }}</span>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
+      {% if nextPost %}
+      <a href="{{ nextPost.url }}" class="post-nav-link post-nav-link--next">
+        <span class="post-nav-label">Newer →</span>
+        <span class="post-nav-title">{{ nextPost.data.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+    {% endif %}
+
+  </div>
+
+</article>
+
+<script src="/js/article.js"></script>

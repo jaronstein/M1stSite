@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: The E-commerce Director's Cut — Mobile1st
+description: "The E-commerce Director's Cut: practical, opinionated writing on experimentation, personalization, and Revenue Per Visitor from the Mobile1st team."
+---
+
+<section class="blog-listing">
+  <div class="container">
+
+    <div class="blog-header">
+      <span class="section-label">The E-commerce Director's Cut</span>
+      <h1>E-Commerce Growth, Straight From the Trenches</h1>
+      <p class="blog-header-sub">Practical, opinionated writing on experimentation, personalization, and Revenue Per Visitor from the Mobile1st team.</p>
+    </div>
+
+    <div class="blog-grid">
+      {% for post in collections.posts %}
+      <a href="{{ post.url }}" class="blog-card">
+        <div class="blog-card-meta">
+          <span class="blog-card-date">{{ post.date | readableDate }}</span>
+          {% if post.data.author %}<span class="blog-card-author">{{ post.data.author }}</span>{% endif %}
+        </div>
+        <h2 class="blog-card-title">{{ post.data.title }}</h2>
+        {% if post.data.description %}
+        <p class="blog-card-excerpt">{{ post.data.description }}</p>
+        {% endif %}
+        <span class="blog-card-cta">Read post →</span>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
