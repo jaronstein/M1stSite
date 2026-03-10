@@ -694,6 +694,26 @@ p  { font-size: 1.05rem; line-height: 1.75; }
 .case-study-desc {
   flex-grow: 1;
 }
+.case-study-meta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  background: var(--mint);
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-top: 0.25rem;
+}
+.case-study-insight {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
 .case-study-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

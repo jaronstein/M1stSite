@@ -1,0 +1,17 @@
+{
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/_site/**": true,
+    "**/.cache/**": true
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/_site": true,
+    "**/.cache": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/_site": true,
+    "**/.cache": true
+  }
+}
