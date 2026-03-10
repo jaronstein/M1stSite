@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep \"\\\\.md$\")",
+      "Read(//c/Users/jaron/.claude/projects/c--Users-jaron-M1st-Site/**)",
+      "Read(//c/Users/jaron/Downloads/**)",
+      "WebFetch(domain:feeds.castos.com)",
+      "WebFetch(domain:permalink.castos.com)",
+      "WebFetch(domain:player.castos.com)",
+      "WebFetch(domain:castos.com)",
+      "Bash(ls \"c:/Users/jaron/M1st Site/src/news/\"*.md)",
+      "Bash(python3:*)",
+      "Bash(grep -n \"description:\" \"c:/Users/jaron/M1st Site/src/news/\"*.md)",
+      "Bash(grep -c \"Want to get away\\\\|Need a wingman\\\\|Make your job easier\\\\|Be a guest on\\\\|Want more\\\\|Check out.*mobile1st.com/news\\\\|hit us up\" \"c:/Users/jaron/M1st Site/src/news/\"*.md)"
+    ]
+  }
+}
