@@ -30,6 +30,8 @@ Talking to your customer based on what they've told you about themselves, or wha
 
 Before we get into the tactics, there's something we need to address. None of this works without the foundation underneath it.
 
+![RPV chart showing revenue per visitor rising then flatlining](/img/rpv-chart.svg)
+
 ---
 
 ## The Prerequisite: Your Data Has to Be Clean

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" style="background:#faf9f6;">
+  <defs>
+    <!-- Paper texture filter -->
+    <filter id="roughen">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" seed="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sketch">
+      <feTurbulence type="turbulence" baseFrequency="0.015" numOctaves="3" seed="8" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sketchline">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="4" seed="5" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="f1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.94  0 0 0 0 0.90  0 0 0 0.12 0" in="f1" result="cloudMap"/>
+      <feBlend in="SourceGraphic" in2="cloudMap" mode="multiply"/>
+    </filter>
+  </defs>
+
+  <!-- Paper background with texture -->
+  <rect width="800" height="500" fill="#faf9f6" filter="url(#paper)"/>
+  <rect width="800" height="500" fill="none" stroke="#e8e2d9" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="400" y="48" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="22" fill="#1a1a1a" filter="url(#roughen)" letter-spacing="0.5">Revenue Per Visitor — Why Is This Flat?</text>
+
+  <!-- Y axis label -->
+  <text x="28" y="260" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="15" fill="#555" transform="rotate(-90, 28, 260)" filter="url(#roughen)">Revenue Per Visitor (RPV)</text>
+
+  <!-- X axis label -->
+  <text x="490" y="458" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="15" fill="#555" filter="url(#roughen)">Time</text>
+
+  <!-- Y axis — wobbly hand drawn -->
+  <path d="M 110 390 C 109 350 111 300 110 260 C 109 220 111 170 110 100" stroke="#1a1a1a" stroke-width="2.2" fill="none" filter="url(#sketchline)" stroke-linecap="round"/>
+  <!-- Arrow up -->
+  <path d="M 110 100 L 105 115 M 110 100 L 115 115" stroke="#1a1a1a" stroke-width="2" fill="none" filter="url(#roughen)" stroke-linecap="round"/>
+
+  <!-- X axis — wobbly hand drawn -->
+  <path d="M 110 390 C 150 391 250 389 350 390 C 450 391 560 389 680 390" stroke="#1a1a1a" stroke-width="2.2" fill="none" filter="url(#sketchline)" stroke-linecap="round"/>
+  <!-- Arrow right -->
+  <path d="M 680 390 L 665 385 M 680 390 L 665 395" stroke="#1a1a1a" stroke-width="2" fill="none" filter="url(#roughen)" stroke-linecap="round"/>
+
+  <!-- THE DATA LINE: rises then flatlines -->
+  <!-- Rising section: 2018-2022 -->
+  <path d="M 130 355 C 155 340 175 318 200 300 C 225 282 245 265 270 248 C 290 234 310 222 330 215"
+        stroke="#1d4ed8" stroke-width="3.2" fill="none" filter="url(#sketchline)" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Transition wobble into flatline -->
+  <path d="M 330 215 C 350 213 365 217 380 214 C 395 211 410 218 425 215 C 440 212 455 217 470 215 C 485 213 500 217 515 215 C 530 213 545 216 560 214 C 575 212 590 216 605 214 C 620 213 635 215 650 214"
+        stroke="#1d4ed8" stroke-width="3.2" fill="none" filter="url(#sketchline)" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Dashed "where it should be going" ghost line -->
+  <path d="M 330 215 C 370 200 410 185 450 170 C 490 155 530 143 570 132 C 600 124 630 118 660 112"
+        stroke="#1d4ed8" stroke-width="2" fill="none" stroke-dasharray="6,5" opacity="0.25" filter="url(#roughen)" stroke-linecap="round"/>
+
+  <!-- Annotation: "Frictionless era" on the rise -->
+  <path d="M 195 290 C 190 270 185 255 175 245" stroke="#888" stroke-width="1.4" fill="none" filter="url(#roughen)" stroke-linecap="round"/>
+  <text x="145" y="238" font-family="'Patrick Hand', 'Caveat', cursive" font-size="13" fill="#666" filter="url(#roughen)">"Remove friction.</text>
+  <text x="148" y="253" font-family="'Patrick Hand', 'Caveat', cursive" font-size="13" fill="#666" filter="url(#roughen)">Optimize the button."</text>
+
+  <!-- Inflection point circle -->
+  <circle cx="330" cy="215" r="7" fill="none" stroke="#d97706" stroke-width="2.2" filter="url(#roughen)"/>
+
+  <!-- Annotation: inflection label -->
+  <path d="M 338 208 C 355 195 368 188 382 182" stroke="#d97706" stroke-width="1.5" fill="none" filter="url(#roughen)" stroke-linecap="round"/>
+  <text x="385" y="180" font-family="'Patrick Hand', 'Caveat', cursive" font-size="13.5" fill="#d97706" filter="url(#roughen)">"Your template is fine."</text>
+
+  <!-- Annotation: flatline label -->
+  <path d="M 490 205 C 490 185 490 175 490 165" stroke="#888" stroke-width="1.4" fill="none" filter="url(#roughen)" stroke-linecap="round"/>
+  <text x="440" y="158" font-family="'Patrick Hand', 'Caveat', cursive" font-size="13" fill="#555" filter="url(#roughen)">So why is this flat?</text>
+  <!-- Little frustrated scribble under the question -->
+  <path d="M 440 162 C 455 162 510 162 525 162" stroke="#555" stroke-width="1" fill="none" filter="url(#roughen)" stroke-linecap="round"/>
+
+  <!-- X axis tick labels -->
+  <text x="130" y="408" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="13" fill="#777" filter="url(#roughen)">2018</text>
+  <path d="M 130 390 L 130 397" stroke="#777" stroke-width="1.5" filter="url(#roughen)"/>
+
+  <text x="240" y="408" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="13" fill="#777" filter="url(#roughen)">2020</text>
+  <path d="M 240 390 L 240 397" stroke="#777" stroke-width="1.5" filter="url(#roughen)"/>
+
+  <text x="350" y="408" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="13" fill="#777" filter="url(#roughen)">2022</text>
+  <path d="M 350 390 L 350 397" stroke="#777" stroke-width="1.5" filter="url(#roughen)"/>
+
+  <text x="490" y="408" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="13" fill="#777" filter="url(#roughen)">Today</text>
+  <path d="M 490 390 L 490 397" stroke="#777" stroke-width="1.5" filter="url(#roughen)"/>
+
+  <!-- Y axis tick labels -->
+  <text x="100" y="360" text-anchor="end" font-family="'Patrick Hand', 'Caveat', cursive" font-size="12" fill="#777" filter="url(#roughen)">low</text>
+  <text x="100" y="220" text-anchor="end" font-family="'Patrick Hand', 'Caveat', cursive" font-size="12" fill="#777" filter="url(#roughen)">good</text>
+
+  <!-- Bottom footnote -->
+  <text x="400" y="484" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="12" fill="#aaa" filter="url(#roughen)">The era of demand capture is over. Time to generate it.</text>
+
+  <!-- Small scribbled arrow pointing down toward flatline from right margin -->
+  <path d="M 648 230 C 655 222 660 218 655 214" stroke="#d97706" stroke-width="1.8" fill="none" filter="url(#roughen)" stroke-linecap="round"/>
+  <path d="M 655 214 L 650 220 M 655 214 L 661 219" stroke="#d97706" stroke-width="1.6" fill="none" filter="url(#roughen)" stroke-linecap="round"/>
+  <text x="636" y="244" text-anchor="middle" font-family="'Patrick Hand', 'Caveat', cursive" font-size="12" fill="#d97706" filter="url(#roughen)">you, rn</text>
+</svg>
