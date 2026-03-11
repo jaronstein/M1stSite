@@ -8,6 +8,68 @@
     result: null
   };
 
+  // ── Answer label maps ──────────────────────────────────────────────────────
+  var ANSWER_LABELS = {
+    q1: {
+      'under1m':   'Under $1M',
+      '1m-5m':     '$1M – $5M',
+      '5m-25m':    '$5M – $25M',
+      '25m-100m':  '$25M – $100M',
+      'over100m':  'Over $100M'
+    },
+    q2: {
+      'paid-social':  'Paid social (Meta, TikTok)',
+      'paid-search':  'Paid search (Google Shopping, PMax)',
+      'paid-both':    'Both paid social and paid search',
+      'organic':      'Mostly organic / email / direct'
+    },
+    q3: {
+      'q3-ads':       'My ads are working but my landing pages aren\'t converting',
+      'q3-offer':     'My products are good but people aren\'t choosing us over competitors',
+      'q3-discovery': 'Shoppers land on my site and can\'t find what they need',
+      'q3-data':      'I know nothing about who my visitors actually are',
+      'q3-testing':   'My conversion rate is fine but RPV isn\'t growing'
+    },
+    q4: {
+      'active':       'We run tests regularly and have solid infrastructure',
+      'occasional':   'We run tests occasionally but not systematically',
+      'not-moving':   'We have a testing program but it\'s not moving the needle',
+      'none':         'We don\'t run A/B tests'
+    },
+    q5: {
+      'shopify':     'Shopify or Shopify Plus',
+      'bigcommerce': 'BigCommerce',
+      'sfcc':        'Salesforce Commerce Cloud',
+      'custom':      'Custom / headless',
+      'other':       'Other'
+    }
+  };
+
+  var RESULT_LABELS = {
+    'result-A': 'Ad-to-Page Content Personalization',
+    'result-B': 'Offer Creation',
+    'result-C': 'Product Discovery',
+    'result-D': 'Zero-Party Data 90-Day Program',
+    'result-E': 'Data-Driven Experimentation',
+    'result-F': 'Not yet qualified (under $1M)',
+    'result-G': 'Mixed signals — needs scoping call'
+  };
+
+  function formatAnswers(answers) {
+    var questions = [
+      { key: 'q1', label: 'Annual online revenue' },
+      { key: 'q2', label: 'Primary traffic source' },
+      { key: 'q3', label: 'Biggest challenge' },
+      { key: 'q4', label: 'Experimentation maturity' },
+      { key: 'q5', label: 'Platform' }
+    ];
+    return questions.map(function (q) {
+      var val = answers[q.key];
+      var readable = (ANSWER_LABELS[q.key] && ANSWER_LABELS[q.key][val]) || val || 'n/a';
+      return q.label + ': ' + readable;
+    }).join('\n');
+  }
+
   // ── Screen navigation ──────────────────────────────────────────────────────
   function showScreen(id) {
     var current = document.querySelector('.quiz-screen.active');
@@ -150,6 +212,18 @@
           body: 'email=' + encodeURIComponent(email)
         }).catch(function () {});
 
+        // Notify data@mobile1st.com via Web3Forms
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: 'c3968343-152a-4c9e-be4c-9562f72b7d69',
+            subject: 'Quiz email captured',
+            email: email,
+            quiz_answers: formatAnswers(state.answers)
+          })
+        }).catch(function () {});
+
         // Pre-fill contact form email
         var contactEmail = document.getElementById('contactEmail');
         if (contactEmail) contactEmail.value = email;
@@ -164,17 +238,44 @@
     if (contactForm) {
       contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        var emailInput = document.getElementById('contactEmail');
-        var emailVal = emailInput ? emailInput.value.trim() : '';
 
-        // Subscribe to Buttondown if email present
+        // TODO: replace with your Buttondown API key (Settings → API keys in Buttondown)
+        var BUTTONDOWN_API_KEY = 'ed1f79ab-26b4-41b7-9529-11cbad0c212f';
+        var nameVal    = (document.getElementById('contactName')    || {}).value || '';
+        var emailVal   = (document.getElementById('contactEmail')   || {}).value || '';
+        var messageVal = (document.getElementById('contactMessage') || {}).value || '';
+        var quizResult = state.result || 'unknown';
+
+        // 1. Add subscriber to Buttondown with full context
         if (emailVal) {
-          fetch('https://buttondown.com/api/emails/embed-subscribe/aronstein', {
+          fetch('https://api.buttondown.email/v1/subscribers', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: 'email=' + encodeURIComponent(emailVal)
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Token ' + BUTTONDOWN_API_KEY
+            },
+            body: JSON.stringify({
+              email: emailVal,
+              notes: 'Name: ' + nameVal + '\nQuiz result: ' + quizResult + '\nMessage: ' + messageVal,
+              tags: ['quiz-lead', quizResult]
+            })
           }).catch(function () {});
         }
+
+        // 2. Send email notification to data@mobile1st.com via Web3Forms
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: 'c3968343-152a-4c9e-be4c-9562f72b7d69',
+            subject: 'Quiz lead: ' + (RESULT_LABELS[quizResult] || quizResult),
+            name: nameVal,
+            email: emailVal,
+            message: messageVal,
+            quiz_result: RESULT_LABELS[quizResult] || quizResult,
+            quiz_answers: formatAnswers(state.answers)
+          })
+        }).catch(function () {});
 
         var successEl = document.getElementById('contactSuccess');
         if (successEl) successEl.style.display = 'block';
