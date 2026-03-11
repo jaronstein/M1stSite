@@ -87,4 +87,19 @@ layout: base.njk
 
 </article>
 
+<div class="nl-popup-overlay" id="nl-popup-overlay" aria-hidden="true">
+  <div class="nl-popup" role="dialog" aria-labelledby="nl-popup-heading" aria-modal="true">
+    <button class="nl-popup-close" id="nl-popup-close" aria-label="Close">&times;</button>
+    <p class="nl-popup__eyebrow">The Director's Cut</p>
+    <h2 class="nl-popup__heading" id="nl-popup-heading">Get the e-commerce insights nobody puts in the agency deck.</h2>
+    <p class="nl-popup__sub">Every week: real data, real outcomes, zero fluff. Free.</p>
+    <form class="nl-popup__form" data-subscribe-form>
+      <input type="email" name="email" class="subscribe-input" placeholder="you@yourcompany.com" required autocomplete="email" />
+      <button type="submit" class="btn btn--primary nl-popup__btn">Send Me the Insights</button>
+    </form>
+    <p class="subscribe-success" style="display:none">You're in. Check your inbox.</p>
+    <button class="nl-popup__dismiss" id="nl-popup-dismiss">No thanks</button>
+  </div>
+</div>
+
 <script src="/js/article.js"></script>

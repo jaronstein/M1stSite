@@ -1893,3 +1893,102 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   cursor: pointer;
 }
 .btn--secondary:hover { opacity: 0.85; }
+
+/* ============================================================
+   NEWSLETTER POPUP (article pages only)
+   ============================================================ */
+.nl-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 54, 45, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.nl-popup-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.nl-popup {
+  position: relative;
+  background: var(--forest);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  border-top: 3px solid var(--accent);
+  padding: 2.5rem 2rem 2rem;
+  max-width: 460px;
+  width: 100%;
+  transform: translateY(16px);
+  transition: transform 0.3s ease;
+}
+.nl-popup-overlay.is-open .nl-popup {
+  transform: translateY(0);
+}
+.nl-popup-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+.nl-popup-close:hover { color: var(--white); }
+.nl-popup__eyebrow {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+}
+.nl-popup__heading {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 1.25;
+  margin: 0 0 0.6rem;
+  color: var(--white);
+}
+.nl-popup__sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  margin: 0 0 1.25rem;
+}
+.nl-popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.nl-popup__btn {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+.nl-popup__dismiss {
+  display: block;
+  width: 100%;
+  margin-top: 0.75rem;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 0;
+}
+.nl-popup__dismiss:hover { color: rgba(255,255,255,0.7); }
+@media (max-width: 480px) {
+  .nl-popup {
+    padding: 2rem 1.25rem 1.5rem;
+  }
+  .nl-popup__heading { font-size: 1.25rem; }
+}

@@ -604,3 +604,50 @@ description: We help e-commerce directors doing $5M–$100M grow revenue per vis
     <p class="final-cta-note">No pitch on the first call. We look at your data first.</p>
   </div>
 </section>
+
+<div class="nl-popup-overlay" id="quiz-popup-overlay" aria-hidden="true">
+  <div class="nl-popup" role="dialog" aria-labelledby="quiz-popup-heading" aria-modal="true">
+    <button class="nl-popup-close" id="quiz-popup-close" aria-label="Close">&times;</button>
+    <p class="nl-popup__eyebrow">2 minutes. Free.</p>
+    <h2 class="nl-popup__heading" id="quiz-popup-heading">Find out exactly where your site is losing revenue.</h2>
+    <p class="nl-popup__sub">Answer 5 questions. Walk away knowing what to fix first and why.</p>
+    <a href="/quiz/" class="btn btn--primary nl-popup__btn" style="display:block; text-align:center; text-decoration:none;">Take the Quiz</a>
+    <button class="nl-popup__dismiss" id="quiz-popup-dismiss">No thanks</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  var POPUP_KEY = 'm1st_quiz_popup_seen';
+  var overlay = document.getElementById('quiz-popup-overlay');
+  if (!overlay || localStorage.getItem(POPUP_KEY)) return;
+
+  var shown = false;
+
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    window.removeEventListener('scroll', onFirstScroll);
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopup() {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    localStorage.setItem(POPUP_KEY, '1');
+  }
+
+  function onFirstScroll() { showPopup(); }
+
+  window.addEventListener('scroll', onFirstScroll, { passive: true });
+  document.getElementById('quiz-popup-close').addEventListener('click', closePopup);
+  document.getElementById('quiz-popup-dismiss').addEventListener('click', closePopup);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closePopup(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) closePopup();
+  });
+})();
+</script>
