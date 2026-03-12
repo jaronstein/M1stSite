@@ -1,6 +1,7 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const fs = require("fs");
 const path = require("path");
+const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -16,7 +17,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("inlineCSS", function () {
-    return fs.readFileSync(path.join(__dirname, "src/css/style.css"), "utf8");
+    const raw = fs.readFileSync(path.join(__dirname, "src/css/style.css"), "utf8");
+    return new CleanCSS({}).minify(raw).styles;
   });
 
   eleventyConfig.addShortcode("inlineJS", function (file) {
