@@ -1,4 +1,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const fs = require("fs");
+const path = require("path");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -11,6 +13,10 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toLocaleDateString("en-US", {
       year: "numeric", month: "long", day: "numeric",
     });
+  });
+
+  eleventyConfig.addShortcode("inlineCSS", function () {
+    return fs.readFileSync(path.join(__dirname, "src/css/style.css"), "utf8");
   });
 
   eleventyConfig.addCollection("posts", (collectionApi) =>
