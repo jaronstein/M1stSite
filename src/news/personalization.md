@@ -6,6 +6,8 @@ author: Justin Aronstein
 description: "Seven high-leverage personalization tactics for Shopify brands ready to move beyond friction reduction and into demand generation."
 podcast_episode_id:
 inline_cta: none
+og_image: https://mobile1st.com/img/DougVillellaWidescreen.png
+
 ---
 
 

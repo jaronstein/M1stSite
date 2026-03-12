@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title or "Mobile1st — Digital Product Growth" }}</title>
   <meta name="description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
+  <link rel="canonical" href="https://mobile1st.com{{ page.url }}" />
+  <link rel="alternate" type="application/atom+xml" href="https://mobile1st.com/feed.xml" title="The E-Commerce Director's Cut" />
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="Mobile1st" />
@@ -21,6 +23,20 @@
   <meta name="twitter:title" content="{{ title or 'Mobile1st — Digital Product Growth' }}" />
   <meta name="twitter:description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
   <meta name="twitter:image" content="{{ og_image or 'https://mobile1st.com/img/og-default.png' }}" />
+
+  <!-- Organization schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mobile1st",
+    "url": "https://mobile1st.com",
+    "logo": "https://mobile1st.com/img/logo.png",
+    "description": "E-commerce optimization for Shopify brands doing $5M–$100M online. Personalization, experimentation, and smarter data.",
+    "founder": { "@type": "Person", "name": "Justin Aronstein" },
+    "contactPoint": { "@type": "ContactPoint", "email": "justin@mobile1st.com", "contactType": "customer service" }
+  }
+  </script>
 
   <!-- Poppins from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

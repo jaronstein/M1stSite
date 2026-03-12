@@ -12,6 +12,20 @@ layout: base.njk
   {% endif %}
 {% endfor %}
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | dump }},
+  "description": {{ description | dump }},
+  "datePublished": "{{ date | htmlDateString }}",
+  "author": { "@type": "Person", "name": "{{ author or 'Justin Aronstein' }}" },
+  "publisher": { "@type": "Organization", "name": "Mobile1st", "logo": { "@type": "ImageObject", "url": "https://mobile1st.com/img/logo.png" } },
+  "url": "https://mobile1st.com{{ page.url }}",
+  "image": "{{ og_image or 'https://mobile1st.com/img/og-default.png' }}"
+}
+</script>
+
 <article class="post-page">
 
   <div class="container">

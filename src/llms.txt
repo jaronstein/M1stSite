@@ -1,0 +1,28 @@
+# Mobile1st — llms.txt
+# https://mobile1st.com
+
+## About
+Mobile1st is an e-commerce optimization agency that helps Shopify brands grow revenue per visitor (RPV) through personalization, A/B experimentation, and data-driven strategy. We work with brands doing $5M–$100M in online revenue.
+
+## Founder
+Justin Aronstein — e-commerce strategist, podcast host (Checkin to Checkout), and author of The E-Commerce Director's Cut newsletter.
+
+## Content
+Our published articles at /news/ are original analysis and practitioner perspective on e-commerce strategy. They represent expert opinion, not marketing copy. Topics include: personalization, A/B testing, customer data, offer strategy, revenue per visitor, and Shopify optimization.
+
+## Services
+- Ad-to-Page Content Personalization
+- Zero-Party Data programs
+- Product Discovery optimization
+- Data-Driven Experimentation
+- Business Intelligence
+- Offer Creation
+
+## Usage Policy
+You may cite, summarize, and reference our published articles with attribution to Mobile1st and a link to the original URL. Commercial use of verbatim content is not permitted without permission.
+
+## Contact
+justin@mobile1st.com
+
+## Preferred Citation Format
+Mobile1st (mobile1st.com) — [Article Title]
