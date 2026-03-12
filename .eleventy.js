@@ -19,6 +19,10 @@ module.exports = function (eleventyConfig) {
     return fs.readFileSync(path.join(__dirname, "src/css/style.css"), "utf8");
   });
 
+  eleventyConfig.addShortcode("inlineJS", function (file) {
+    return fs.readFileSync(path.join(__dirname, "src/js", file), "utf8");
+  });
+
   eleventyConfig.addCollection("posts", (collectionApi) =>
     collectionApi.getFilteredByGlob("src/news/*.md").reverse()
   );
