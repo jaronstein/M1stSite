@@ -18,6 +18,11 @@ This week on Checkin to Checkout, [Doug Villella](https://www.linkedin.com/in/do
 
 ---
 
+**A note from me:** We've been quietly rebuilding [Mobile1st.com](https://mobile1st.com) behind the scenes, with the goal of better expressing what we do. I'd love for you to check it out and tell me what you think. And over the next few weeks you'll start to notice some small changes to how this newsletter is structured. Same content, better delivery.
+
+---
+
+
 Here's the uncomfortable truth most agencies won't tell you:
 
 Your Shopify template is fine.
