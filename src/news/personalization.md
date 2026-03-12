@@ -4,11 +4,19 @@ title: "The Top 7 Ways to Use Personalization on Your Site, Right Now"
 date: 2026-03-12
 author: Justin Aronstein
 description: "Seven high-leverage personalization tactics for Shopify brands ready to move beyond friction reduction and into demand generation."
-podcast_episode_id: 2389905
+podcast_episode_id:
 inline_cta: none
 ---
 
-# The Top 7 Ways to Use Personalization on Your Site, Right Now
+
+### This Week on Checkin to Checkout
+
+[![Checkin to Checkout - Season 2 Ep. 9 with Doug Villella](/img/DougVillellaWidescreen.png)](https://podcast.mobile1st.com/episodes/how-to-get-actionable-feedback-from-customers-and-your-team-doug-villella)
+This week on Checkin to Checkout, [Doug Villella](https://www.linkedin.com/in/dougvillella/) from APG breaks down what it actually looks like to build an e-commerce operation from scratch inside a company that sells O rings — and why talking to customers every week is the only strategy that matters.
+
+🎧 [Listen to the full episode](https://podcast.mobile1st.com/episodes/how-to-get-actionable-feedback-from-customers-and-your-team-doug-villella)
+
+---
 
 Here's the uncomfortable truth most agencies won't tell you:
 
