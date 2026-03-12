@@ -6,6 +6,22 @@
   <title>{{ title or "Mobile1st — Digital Product Growth" }}</title>
   <meta name="description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
 
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Mobile1st" />
+  <meta property="og:title" content="{{ title or 'Mobile1st — Digital Product Growth' }}" />
+  <meta property="og:description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
+  <meta property="og:url" content="https://mobile1st.com{{ page.url }}" />
+  <meta property="og:type" content="{% if date %}article{% else %}website{% endif %}" />
+  <meta property="og:image" content="{{ og_image or 'https://mobile1st.com/img/og-default.png' }}" />
+  {% if date %}<meta property="article:published_time" content="{{ date | htmlDateString }}" />{% endif %}
+  {% if author %}<meta property="article:author" content="{{ author }}" />{% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ title or 'Mobile1st — Digital Product Growth' }}" />
+  <meta name="twitter:description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
+  <meta name="twitter:image" content="{{ og_image or 'https://mobile1st.com/img/og-default.png' }}" />
+
   <!-- Poppins from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
