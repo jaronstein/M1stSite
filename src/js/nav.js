@@ -24,6 +24,8 @@
 
   function openModal(e) {
     e.preventDefault();
+    var iframe = modal.querySelector('iframe[data-src]');
+    if (iframe) { iframe.src = iframe.getAttribute('data-src'); iframe.removeAttribute('data-src'); }
     modal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
@@ -55,6 +57,8 @@
 
   function openModal(e) {
     e.preventDefault();
+    var iframe = modal.querySelector('iframe[data-src]');
+    if (iframe) { iframe.src = iframe.getAttribute('data-src'); iframe.removeAttribute('data-src'); }
     modal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
