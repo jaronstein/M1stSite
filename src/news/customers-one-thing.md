@@ -47,7 +47,7 @@ That doesn’t mean every brand should start sending shoppers straight to checko
 
 If people often buy accessories, that’s what the cart should highlight. If it’s a big-ticket item, the cart should reassure them on value. If you’re selling bundles, that’s where you help customers see the upside of adding more.
 
-The only way to know what’s right is through research and experimentation. That’s how you figure out whether your cart is helping or getting in the way.
+The only way to know what’s right is through research and [experimentation](https://mobile1st.com/#products). That’s how you figure out whether your cart is helping or getting in the way.
 
 ### The Next Step
 The lesson from this experiment isn’t “always skip the cart.” It’s that your cart should be built around how your customers actually buy. And the only way to know what’s right is to test it.

@@ -34,7 +34,7 @@ We pull the creative ID from each Meta ad, download the actual creative, and ana
 #### **Problem #2: There's No Real Reason to Buy From You Over the Next Guy**
 Let's say someone finds a product they want. They're comparing you to another brand selling something almost identical at basically the same price. What tips them your way?
 
-That's your offer, and most brands don't really have one. They have a product and a price. The offer is what makes the perceived value feel bigger than the price tag, and bigger than what the competitor is offering. Most brands reach for a discount when they need this. And yeah, it works in the short term. But you can't discount your way to a healthy brand. Eventually it just trains your customers to wait for the sale.
+That's your offer, and most brands don't really have one. They have a product and a price. The offer is what makes the perceived value feel bigger than the price tag, and bigger than what the competitor is offering. Most brands reach for a discount when they need this. (We've written a full breakdown of [how to build an actual offer](/news/offers/) — not a discount, but a reason to choose you.) And yeah, it works in the short term. But you can't discount your way to a healthy brand. Eventually it just trains your customers to wait for the sale.
 
 **Our Solution: Strategic Offer Development**
 
@@ -56,7 +56,7 @@ People want to feel like a brand gets them. But most e-commerce sites show the e
 
 The tricky part is that you can't figure out who someone is just by watching them browse. Clickstream data tells you what they looked at. It doesn't tell you why, or who they are, or what they actually need. To personalize well, you have to learn more. And the only real way to learn more is to ask.
 
-**Our Solution: Zero-Party Data & Personalization**
+**Our Solution: [Zero-Party Data & Personalization](https://mobile1st.com/#product-zero-party-data)**
 
 The industry calls it zero-party data, meaning info a customer gives you directly, usually in exchange for something useful like a recommendation or a discount. We build quick, low-friction quiz flows right into your site. A few questions, maybe 30 seconds. Then we use those answers to personalize the on-site experience, and more importantly, to power your email and SMS in a way that actually feels relevant. The difference between "here's our weekly email" and "here's something specifically for you" is huge.
 

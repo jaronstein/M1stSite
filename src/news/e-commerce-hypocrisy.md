@@ -54,7 +54,7 @@ Facebook has done the heavy lifting to find these specific people.
 
 And then you drop them all onto **the exact same website.**
 
-Why is your site a static monolith when your acquisition strategy is dynamic and fluid? If you wouldn’t run the same ad to every single person on the internet, why are you showing the same homepage to every single visitor?
+Why is your site a static monolith when your acquisition strategy is dynamic and fluid? If you wouldn’t run the same ad to every single person on the internet, why are you showing the same homepage to every single visitor? [Personalization](/news/personalization/) is how you close that gap.
 
 <div id="inline-cta-anchor"></div>
 
@@ -63,7 +63,7 @@ Stop treating your site like a sacred cow. It’s a product. It needs to grow. W
 
 If you want to stop lighting ad spend on fire, you need to apply the same rigor to the post-click experience that you apply to the pre-click experience. But—and this is key—you have to stop guessing.
 
-To actually move the needle on Revenue Per Visitor (RPV), you need to know what matters.
+To actually move the needle on Revenue Per Visitor (RPV), you need to know what matters. That starts with [understanding which insights are actually worth acting on](/news/the-hierarchy-of-e-commerce-insights/).
 
 - **Don't start with the homepage.** (Seriously, stop it. That’s vanity.)
 

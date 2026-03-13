@@ -26,7 +26,7 @@ Look, if you have a product getting 10,000 hits a month but only 50 people are b
 As we’ve argued before, [The View to Buy Report is the one report that will save your BFCM week](/news/view-to-buy) because it tells you exactly where your ad spend is being set on fire. If a product has a low View to Buy rate, stop throwing money at it. Fix the page first, then turn the tap back on.
 
 ### 2. Product Contribution Margin (The "True Profit" Report)
-If I could have any superpower, it wouldn’t be flying; it would be omniscience. I want to see the hidden mechanics of why a business actually works. In e-commerce, that "ultimate truth" is [product-level profitability.](/news/price-vs-time-to-purchase-y46jj)
+If I could have any superpower, it wouldn’t be flying; it would be omniscience. I want to see the hidden mechanics of why a business actually works. In e-commerce, that "ultimate truth" is [product-level profitability.](/news/profitability-model/)
 
 Most people look at a "Bestseller" and see a hero. But until you break it down, you're just looking at a reflection of reality. You need a report that follows the money out as carefully as it follows the money in.
 
@@ -80,6 +80,6 @@ Using this report gives you additional budget to find more new customers, becaus
 ### Go Build These Reports
 If you’re stuck between $3M and $100M, you can’t "hustle" your way to the next level. You can’t just copy what your competitors are doing because, frankly, they’re probably guessing, too.
 
-Most agencies will give you a PDF of "best practices" and some "button color tests." We’d rather look at your View to Buy report and tell you why your site is failing your media spend. It’s not always the polite conversation you’ll get at a corporate board meeting, but it’s the one that grows your revenue per visitor.
+Most agencies will give you a PDF of "best practices" and some "button color tests." We’d rather look at your View to Buy report and tell you why your site is failing your media spend. Our [Business Intelligence](https://mobile1st.com/#product-bi) product is built to surface exactly these kinds of answers. It’s not always the polite conversation you’ll get at a corporate board meeting, but it’s the one that grows your revenue per visitor.
 
 **Ready to see what's actually happening under the hood?**[** Reach out**](https://www.linkedin.com/in/justinaronstein/)**, we have products to build these reports for you, or guide your team.**

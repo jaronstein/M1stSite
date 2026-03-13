@@ -84,4 +84,4 @@ The real question isn’t “how big should the search bar be.”
 
 It’s: **how do we maximize the amount of meaningful product information every shopper absorbs before they decide to buy?**
 
-That might be the most important leading indicator of conversion you’re not measuring.
+Every shopper [arrives at your PDP with a specific to-do list](/news/shopper-pdp-todo-list/) — and that might be the most important leading indicator of conversion you’re not measuring.

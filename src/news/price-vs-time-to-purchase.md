@@ -64,7 +64,7 @@ If you’re investing in great content for TikTok, Instagram, or YouTube that ex
 Lastly, if you’re measuring experiments, use revenue per visitor as your key metric. While you’re not going to be able to stitch every touchpoint together, if you can at least prove your change increases revenue across all of the visitors, even those that came back multiple times, it will be a better predictor of long-term growth.
 
 ## Should You Personalize Your Site Based on Where They Are in the Funnel?
-Yes, absolutely. As long as you’re personalizing for every part of the funnel.
+Yes, absolutely. As long as you’re personalizing for every part of the funnel. We’ve written about [the top seven ways to use personalization on your site right now](/news/personalization/) — the same logic applies here.
 
 The hard part is understanding the intent signals to know where someone is in the funnel. But let’s say you know that, now you need to provide the relevant content. To do that, you already need to have the content produced and accessible on the PDP. So before you start personalizing, ensure that you have created and organized content for all parts of the funnel on the PDP.
 
@@ -73,7 +73,7 @@ And then once you start personalizing, please, for the love of God, don’t just
 ## The Real Job of a Product Page
 No matter how expensive your product is, your job isn’t to make the site “convert faster.” It’s to make it easier for someone to stay confident across all those interactions that happen before the sale.
 
-When people are looking at your [product page, they’re trying to get 7 things done](/news/the-hierarchy-of-e-commerce-insights-xh9mb-96ydr)… It’s hard to tell which one until they engaging with the page, so make it easy to do any of these tasks.
+When people are looking at your product page, [they’re trying to get 7 things done](/news/shopper-pdp-todo-list/)… It’s hard to tell which one until they engaging with the page, so make it easy to do any of these tasks.
 
 That’s a subtle but critical shift. It’s not just about optimizing checkout or tweaking buttons. It’s about designing your site to support every part of a nonlinear journey that could stretch across six weeks, multiple devices, and countless distractions.
 

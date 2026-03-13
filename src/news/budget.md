@@ -29,7 +29,7 @@ But deep down, you know the truth. Ad costs are only going one direction, and yo
 ### How to steal the money
 You know you should be allocating 10% to 20% of your budget to test new channels. Maybe it’s TikTok, perhaps it’s Connected TV, maybe it’s influencers.
 
-Here is the unlock, though. Stop thinking of "On-site Experimentation" as a separate line item. And unlike TikTok, this channel makes every other channel perform better.
+Here is the unlock, though. Stop thinking of "On-site Experimentation" as a separate line item. And unlike TikTok, this channel makes every other channel perform better. Our [Data-Driven Experimentation](https://mobile1st.com/#products) program is exactly what that budget should fund.
 
 Let’s do some napkin math on a hypothetical $7 million store.
 
@@ -51,7 +51,7 @@ Okay, so you’ve stolen the budget. Now, the future you will have to prove to t
 
 Most agencies will bore you to death talking about Conversion Rate. We don't care about Conversion Rate. It’s a vanity metric. I can double your conversion rate tomorrow by lowering all your prices to $1. You’ll go out of business, but your chart will look great.
 
-We care about Revenue Per Visitor (RPV). That’s the only number that pays the bills.
+We care about Revenue Per Visitor (RPV). That’s the only number that pays the bills. If you want to understand exactly what drives RPV, [the hierarchy of e-commerce insights](/news/the-hierarchy-of-e-commerce-insights/) is the best place to start.
 
 Let's look at the impact on that $7 million business.
 

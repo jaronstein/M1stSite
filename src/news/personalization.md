@@ -39,7 +39,7 @@ That era is over.
 
 We're now in the era of **demand generation**. And that requires something completely different. It requires making someone *feel something* about your brand before they've decided to buy.
 
-That's emotional connection. And you build it through storytelling and through **personalization**.
+That's emotional connection. And you build it through storytelling and through **personalization**. We wrote about [the four conversion killers most brands ignore](/news/four-things-that-matter/) — this shift from demand capture to demand generation is at the root of all four.
 
 Talking to your customer based on what they've told you about themselves, or what they've responded to in the past, is the highest-leverage move left in e-commerce. It's the difference between a catalog and a conversation.
 
@@ -101,7 +101,7 @@ That's a broken handoff. And it's costing you conversions every single day.
 
 The fix is simple in theory. You match the landing page experience to the ad. If the ad spoke to a specific desire, the landing page leads with that desire. If it featured a specific product angle, the page opens with that angle.
 
-We have a software-assisted solution that does this at scale, even when you're running hundreds of ad variants. Every landing page experience matches the ad that drove the click. The handoff becomes seamless. The story continues.
+We have a [software-assisted solution](https://mobile1st.com/#products) that does this at scale, even when you're running hundreds of ad variants. Every landing page experience matches the ad that drove the click. The handoff becomes seamless. The story continues.
 
 It works. And it's more fun to build than you'd think.
 

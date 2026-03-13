@@ -24,7 +24,7 @@ To survive 2026, you have to pivot to profitability. You need to obsess over **L
 ### 2. Profitability is the only metric that matters
 I don’t care what your ROAS is. I really don’t.
 
-If you can’t tell me the **Contribution Margin** of your campaigns, you aren’t running a business; you’re running a charity for Google and Meta.
+If you can’t tell me the **Contribution Margin** of your campaigns, you aren’t running a business; you’re running a charity for Google and Meta. If you want to build the model that actually shows you this, read [the ultimate e-commerce profitability model](/news/profitability-model/).
 
 You need to understand the profitability levers of your *entire* business—even the ones you hate, like logistics, returns, and COGS. If you don't understand how a 2% increase in return rate destroys your campaign's profitability, you’re going to get blindsided.
 
@@ -37,7 +37,7 @@ GA4 is actually *more* powerful than Universal Analytics; you just haven't set i
 
 - **Want to know if driving traffic to a specific PDP actually impacts profitability?** Hook GA4 up to your data warehouse.
 
-Whether you are collecting data in GA4, a warehouse, or a CDP, you need to actually get the data *out* to make decisions. And before you say the interface is too hard: **Use AI.** It will write the queries for you. No more excuses.
+Whether you are collecting data in GA4, a warehouse, or a CDP, you need to actually get the data *out* to make decisions. Our [Business Intelligence](https://mobile1st.com/#product-bi) product is built to do exactly this. And before you say the interface is too hard: **Use AI.** It will write the queries for you. No more excuses.
 
 ### 4. You aren't Steve Jobs (Test everything)
 The biggest threat to your job is the HiPPO (Highest Paid Person's Opinion). Stop guessing what customers want. You aren't that smart. Neither is your CEO.

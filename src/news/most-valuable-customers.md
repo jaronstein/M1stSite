@@ -14,7 +14,7 @@ Email me your customer file. I’ll sift through it, pull out your highest value
 
 
 
-  My favorite thing to do in any e-commerce business is to tear apart the customer file. I’ll pour a cup of coffee, open a spreadsheet, and start digging: where do our customers live, what are they buying, how big are their orders, and how often are they coming back? It’s the most boring-sounding task in the world, but it tells you everything you need to know about how the business really works. The patterns in those rows and columns reveal the truth about what’s driving growth, what’s holding it back, and who’s actually keeping the lights on.
+  My favorite thing to do in any e-commerce business is to tear apart the customer file. I’ll pour a cup of coffee, open a spreadsheet, and start digging: where do our customers live, what are they buying, how big are their orders, and how often are they coming back? Our [Business Intelligence](https://mobile1st.com/#product-bi) product is built to surface this kind of analysis systematically. It’s the most boring-sounding task in the world, but it tells you everything you need to know about how the business really works. The patterns in those rows and columns reveal the truth about what’s driving growth, what’s holding it back, and who’s actually keeping the lights on.
 
 After doing this across dozens of brands, I’ve found a pattern that almost no one talks about. Your best customers are not who you think they are. They’re not your loyal Instagram followers. They’re not the superfans replying to your marketing emails. They’re not even the ones leaving glowing reviews or sharing your content. Your best customers —the ones with the highest lifetime value —are, more often than not, **businesses**.
 

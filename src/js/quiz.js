@@ -70,6 +70,13 @@
     }).join('\n');
   }
 
+  // ── Analytics ──────────────────────────────────────────────────────────────
+  function track(name, props) {
+    if (window.zaraz && typeof window.zaraz.track === 'function') {
+      window.zaraz.track(name, props || {});
+    }
+  }
+
   // ── Screen navigation ──────────────────────────────────────────────────────
   function showScreen(id) {
     var current = document.querySelector('.quiz-screen.active');
@@ -102,7 +109,11 @@
 
     if (nextBtn) {
       nextBtn.addEventListener('click', function () {
-        if (state.answers[stateKey]) showScreen(nextScreenId);
+        if (state.answers[stateKey]) {
+          var answerLabel = (ANSWER_LABELS[stateKey] && ANSWER_LABELS[stateKey][state.answers[stateKey]]) || state.answers[stateKey];
+          track('quiz_step', { question: stateKey, answer: answerLabel });
+          showScreen(nextScreenId);
+        }
       });
     }
   }
@@ -168,7 +179,10 @@
     // Start button
     var btnStart = document.getElementById('btnStart');
     if (btnStart) {
-      btnStart.addEventListener('click', function () { showScreen('screen-q1'); });
+      btnStart.addEventListener('click', function () {
+        track('quiz_started');
+        showScreen('screen-q1');
+      });
     }
 
     // Wire all question screens
@@ -229,6 +243,8 @@
         if (contactEmail) contactEmail.value = email;
 
         state.result = determineResult(state.answers);
+        track('quiz_email_submitted');
+        track('quiz_result', { result: RESULT_LABELS[state.result] || state.result });
         showResult(state.result);
       });
     }
@@ -277,6 +293,7 @@
           })
         }).catch(function () {});
 
+        track('quiz_contact_submitted', { result: RESULT_LABELS[quizResult] || quizResult });
         var successEl = document.getElementById('contactSuccess');
         if (successEl) successEl.style.display = 'block';
         var submitBtn = contactForm.querySelector('button[type="submit"]');

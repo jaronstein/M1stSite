@@ -64,7 +64,7 @@ Think about it: Making a bad experience faster just helps people leave your site
 
 If an experiment improves the *perceived value* of your product or helps a customer find the *exact right product* for their specific needs, it goes straight to the top of the priority list. We want to spend our time helping the customer understand why they should pay you full price, not just making it easier for them to click "Buy" on something they aren't sure about.
 
-Similarly, if we can personalize the experience for almost all users—not just a tiny segment—we do everything we can to test that right away. Personalization that scales is a revenue multiplier.
+Similarly, if we can personalize the experience for almost all users—not just a tiny segment—we do everything we can to test that right away. Personalization that scales is a revenue multiplier. Our [Data-Driven Experimentation](https://mobile1st.com/#products) program is built around exactly this prioritization framework.
 
 Stop worrying about making the "Buy" button 0.2 seconds faster. Start worrying about why the customer is hovering over it and not clicking. Are they confused? Do they feel the value? Do they know this is the right version for them? Solve for value, and the conversion will follow.
 

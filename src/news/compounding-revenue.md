@@ -12,7 +12,7 @@ Every e-commerce team thinks they have a traffic problem. They don’t.
 
 They have an *insight* problem.
 
-Traffic is the easiest thing in the world to buy. Anyone with a credit card and a pulse can spend money on ads. Real insight, the kind that tells you why customers hesitate, why they abandon the cart, or why your best-selling product isn’t your most profitable one, that’s the rare stuff.
+Traffic is the easiest thing in the world to buy. Anyone with a credit card and a pulse can spend money on ads. Real insight, the kind that tells you why customers hesitate, why they abandon the cart, or why your best-selling product isn’t your most profitable one, that’s the rare stuff. We laid out exactly how insight quality breaks down in [the hierarchy of e-commerce insights](/news/the-hierarchy-of-e-commerce-insights/).
 
 Most teams drown in dashboards. They can tell you conversion rate by SKU, bounce rate by device, and revenue by channel before their second coffee. They know exactly *where* customers drop off. But not *why.* And that missing “why” is usually where the money’s hiding.
 

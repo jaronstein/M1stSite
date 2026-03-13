@@ -21,7 +21,7 @@ If your brand story lives in the footer, it doesn't exist. You’re running a ca
 ### The Great "Friction" Lie
 I’m going to say something that might get me kicked out of the CRO club: **Friction is rarely your problem.**
 
-We’ve run thousands of experiments, and the ones focused solely on "reducing friction" lose about 90% of the time.
+We’ve run thousands of experiments, and the ones focused solely on "reducing friction" lose about 90% of the time. The better move is [personalization](/news/personalization/) — making the site feel like it knows who’s on it, and giving them a reason to connect with the brand before they decide to buy.
 
 Your customers aren't stupid. They know how to checkout. The reason they aren't buying isn't because they can't find the button; it’s because they don't care yet. They want to know if the product solves their specific problem ("Is this teacher-appropriate?") and if they trust the brand.
 

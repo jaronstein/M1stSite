@@ -50,7 +50,7 @@ Maybe you think it’s your 30-day return policy. *Again, unfortunately,* that�
 
 If you and your competitor are selling a similar product at a similar price with similar shipping terms, you are in a race to the bottom. You are a commodity. And commodities compete on price, which is a great way to bankrupt your business.
 
-So, how do you win without slashing your margins?
+So, how do you win without slashing your margins? The answer is building a real offer — which is one of the [four things standing between your traffic and your revenue](/news/four-things-that-matter/).
 
 ### Constructing "The Offer" (The Secret Sauce)
 You need to stop selling a *product* and start making an *offer*.
@@ -148,7 +148,7 @@ Take what you already have and expand it until it takes up serious visual real e
 If you can't give them more, make sure they know exactly how much they are already getting.
 
 ### The Bottom Line
-If you are staring at your dashboard trying to figure out how to increase revenue per visitor and nothing is working, stop looking at your code. Stop looking at your navigation bar.
+If you are staring at your dashboard trying to figure out how to increase revenue per visitor and nothing is working, stop looking at your code. Stop looking at your navigation bar. Our [Offer Creation program](https://mobile1st.com/#product-offer-creation) is built specifically for this.
 
 Start looking at your value proposition.
 

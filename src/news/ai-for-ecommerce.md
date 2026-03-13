@@ -65,7 +65,7 @@ Stop explaining. Start showing. Depending on the size of the change, here is you
 
 - **For Brand New Pages:** Use **v0** (by Vercel). If you are building a landing page from scratch to test a new offer, you can prompt v0 to build a pixel-perfect, fully coded UI in seconds. They look incredible and can serve as the ultimate "Version Zero" wireframe.
 
-These are just a few ways I'm using AI every day to cut through the noise, skip the endless meetings, and actually launch experiments that drive revenue. (If you want to read more of our rants on digital product growth, check out our all our [insights](/news).).
+These are just a few ways I'm using AI every day to cut through the noise, skip the endless meetings, and actually launch experiments that drive revenue. If you're wondering how to structure the experiments themselves, our [Data-Driven Experimentation](https://mobile1st.com/#products) program is where the rubber meets the road. (If you want to read more of our rants on digital product growth, check out our all our [insights](/news).).
 
 **What did I miss? What else should E-com Directors be doing in the trenches?**
 
