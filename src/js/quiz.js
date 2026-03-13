@@ -220,7 +220,7 @@
         state.email = email;
 
         // Subscribe to Buttondown
-        fetch('https://buttondown.com/api/emails/embed-subscribe/aronstein', {
+        fetch('https://buttondown.com/api/emails/embed-subscribe/directorscut', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: 'email=' + encodeURIComponent(email)
