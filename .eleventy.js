@@ -10,6 +10,14 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
+  eleventyConfig.addFilter("durationToSeconds", (duration) => {
+    if (!duration) return null;
+    const parts = duration.split(":").map(Number);
+    if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2];
+    if (parts.length === 2) return parts[0] * 60 + parts[1];
+    return null;
+  });
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("en-US", {
       year: "numeric", month: "long", day: "numeric",

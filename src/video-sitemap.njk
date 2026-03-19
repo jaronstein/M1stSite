@@ -1,0 +1,24 @@
+---
+permalink: /video-sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  {%- for ep in podcast.episodes %}
+  {%- if ep.audioType === "video/mp4" and ep.audioUrl and ep.slug %}
+  <url>
+    <loc>https://mobile1st.com/podcast/{{ ep.slug }}/</loc>
+    <video:video>
+      <video:thumbnail_loc>{{ ep.image }}</video:thumbnail_loc>
+      <video:title>{{ ep.title | escape }}</video:title>
+      <video:description>{{ ep.plainDescription | escape }}</video:description>
+      <video:content_loc>{{ ep.audioUrl }}</video:content_loc>
+      <video:publication_date>{{ ep.date }}</video:publication_date>
+      {% if ep.duration %}<video:duration>{{ ep.duration | durationToSeconds }}</video:duration>{% endif %}
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  {%- endif %}
+  {%- endfor %}
+</urlset>

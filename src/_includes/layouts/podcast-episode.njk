@@ -1,0 +1,130 @@
+---
+layout: base.njk
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": {{ episode.title | dump }},
+  "description": {{ episode.plainDescription | dump }},
+  "datePublished": "{{ episode.date }}",
+  "url": "https://mobile1st.com/podcast/{{ episode.slug }}/",
+  "associatedMedia": {
+    "@type": "MediaObject",
+    "contentUrl": {{ episode.audioUrl | dump }}
+  },
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Checkin to Checkout",
+    "url": "https://mobile1st.com/podcast/"
+  }
+}
+</script>
+{% if episode.audioType === "video/mp4" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ episode.title | dump }},
+  "description": {{ episode.plainDescription | dump }},
+  "thumbnailUrl": {{ episode.image | dump }},
+  "uploadDate": "{{ episode.date }}",
+  "contentUrl": {{ episode.audioUrl | dump }},
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mobile1st",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mobile1st.com/img/logo.png"
+    }
+  }
+}
+</script>
+{% endif %}
+
+<div class="podcast-episode-page">
+  <div class="container">
+
+    <a href="/podcast/" class="post-back">← All Episodes</a>
+
+    <div class="podcast-episode__header">
+      {% if episode.image %}
+      <img class="podcast-episode__img" src="{{ episode.image }}" alt="{{ episode.title }}" width="160" height="160" />
+      {% endif %}
+      <div class="podcast-episode__header-text">
+        <div class="podcast-episode__meta">
+          {% if episode.season %}<span class="episode-badge">Season {{ episode.season }}</span>{% endif %}
+          {% if episode.episodeNum %}<span class="episode-badge">Episode {{ episode.episodeNum }}</span>{% endif %}
+          {% if episode.readableDate %}<span class="episode-meta-date">{{ episode.readableDate }}</span>{% endif %}
+          {% if episode.duration %}<span class="episode-meta-sep">·</span><span class="episode-meta-duration">{{ episode.duration }}</span>{% endif %}
+        </div>
+        <h1 class="podcast-episode__title">{{ episode.title }}</h1>
+      </div>
+    </div>
+
+    <!-- Player -->
+    {% if episode.audioType === "video/mp4" and episode.audioUrl %}
+    <div class="podcast-player podcast-player--video">
+      <video
+        controls
+        preload="metadata"
+        class="podcast-video"
+        {% if episode.image %}poster="{{ episode.image }}"{% endif %}
+      >
+        <source src="{{ episode.audioUrl }}" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </div>
+    {% elif episode.castosEpisodeId %}
+    <div class="podcast-player">
+      <iframe
+        src="https://6838ae27d7d6e1-61780196.castos.com/player/{{ episode.castosEpisodeId }}"
+        width="100%"
+        height="150"
+        frameborder="0"
+        scrolling="no"
+        title="{{ episode.title }}"
+      ></iframe>
+    </div>
+    {% elif episode.audioUrl %}
+    <div class="podcast-player podcast-player--native">
+      <audio controls preload="metadata" class="podcast-audio">
+        <source src="{{ episode.audioUrl }}" type="{{ episode.audioType }}">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    {% endif %}
+
+    <!-- Listen On -->
+    <div class="podcast-listen-on">
+      <span class="podcast-listen-on__label">Listen on:</span>
+      {% include "components/podcast-platforms.njk" %}
+    </div>
+
+    <!-- Episode Description -->
+    {% if episode.description %}
+    <div class="podcast-episode__description">
+      {{ episode.description | safe }}
+    </div>
+    {% endif %}
+
+    <!-- Transcript -->
+    <div class="podcast-episode__transcript">
+      <h2 class="podcast-transcript__heading">Transcript</h2>
+      {% if podcastTranscripts[episode.slug] %}
+      <div class="transcript-body">
+        {{ podcastTranscripts[episode.slug] | safe }}
+      </div>
+      {% else %}
+      <p class="transcript-placeholder">Transcript not yet available for this episode. To add one, create <code>src/_data/transcripts/{{ episode.slug }}.html</code>.</p>
+      {% endif %}
+    </div>
+
+    <div class="podcast-episode__footer">
+      <a href="/podcast/" class="btn btn-outline-dark">← Back to All Episodes</a>
+      <button class="btn btn-outline-dark" data-podcast-modal>Apply to Be a Guest →</button>
+    </div>
+
+  </div>
+</div>

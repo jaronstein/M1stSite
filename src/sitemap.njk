@@ -27,4 +27,17 @@ eleventyExcludeFromCollections: true
     <priority>0.6</priority>
   </url>
   {%- endfor %}
+  <url>
+    <loc>https://mobile1st.com/podcast/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {%- for ep in podcast.episodes %}
+  <url>
+    <loc>https://mobile1st.com/podcast/{{ ep.slug }}/</loc>
+    <lastmod>{{ ep.date }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
 </urlset>

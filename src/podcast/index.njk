@@ -1,0 +1,69 @@
+---
+layout: base.njk
+title: "Checkin to Checkout — The E-Commerce Podcast"
+description: "Stories from e-commerce leaders on how they got where they are, and where they think the industry is going. Hosted by Justin Aronstein."
+---
+
+<div class="podcast-index">
+
+  <div class="podcast-index__header">
+    <div class="container">
+      <div class="podcast-index__hero">
+        {% if podcast.metadata.image %}
+        <img class="podcast-index__cover" src="{{ podcast.metadata.image }}" alt="Checkin to Checkout Podcast Cover" width="200" height="200" />
+        {% endif %}
+        <div class="podcast-index__info">
+          <p class="podcast-index__eyebrow">The Podcast</p>
+          <h1 class="podcast-index__title">Checkin to Checkout</h1>
+          <p class="podcast-index__description">{{ podcast.metadata.description }}</p>
+          {% include "components/podcast-platforms.njk" %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="podcast-index__episodes">
+    <div class="container">
+      {% if podcast.seasons.length %}
+
+      {% for season in podcast.seasons %}
+      <div class="season-group">
+        <h2 class="season-heading">Season {{ season.number }}</h2>
+        <div class="episode-list">
+          {% for ep in season.episodes %}
+          <a href="/podcast/{{ ep.slug }}/" class="episode-card">
+            {% if ep.image %}
+            <img class="episode-card__img" src="{{ ep.image }}" alt="{{ ep.title }}" width="96" height="96" loading="lazy" />
+            {% endif %}
+            <div class="episode-card__body">
+              <div class="episode-card__meta">
+                <span class="episode-card__num">Ep. {{ ep.episodeNum }}</span>
+                <span class="episode-card__sep">·</span>
+                <span>{{ ep.readableDate }}</span>
+                {% if ep.duration %}<span class="episode-card__sep">·</span><span>{{ ep.duration }}</span>{% endif %}
+              </div>
+              <h3 class="episode-card__title">{{ ep.title }}</h3>
+              {% if ep.plainDescription %}
+              <p class="episode-card__desc">{{ ep.plainDescription | truncate(160) }}</p>
+              {% endif %}
+            </div>
+            <div class="episode-card__arrow">→</div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+
+      {% else %}
+      <p style="color: var(--text-muted); padding: 3rem 0;">Episodes loading — check back soon.</p>
+      {% endif %}
+
+      <div class="podcast-guest-cta">
+        <p class="podcast-guest-cta__text">Want to share your story on Checkin to Checkout?</p>
+        <button class="btn btn-outline-dark" data-podcast-modal>Apply to Be a Guest →</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>

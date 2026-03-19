@@ -1,0 +1,12 @@
+---
+pagination:
+  data: podcast.episodes
+  size: 1
+  alias: episode
+permalink: "/podcast/{{ episode.slug }}/"
+layout: layouts/podcast-episode.njk
+eleventyComputed:
+  title: "{{ episode.title }} — Checkin to Checkout"
+  description: "{{ episode.plainDescription }}"
+  og_image: "{{ episode.image }}"
+---

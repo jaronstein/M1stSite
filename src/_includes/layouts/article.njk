@@ -42,6 +42,7 @@ layout: base.njk
 
     {% if podcast_episode_id %}
     <div class="post-podcast-player">
+      <p class="post-podcast-player__label">Related Episode</p>
       <iframe src="https://6838ae27d7d6e1-61780196.castos.com/player/{{ podcast_episode_id }}" width="100%" height="150" frameborder="0" scrolling="no"></iframe>
     </div>
     {% endif %}
