@@ -48,6 +48,20 @@ function slugFromUrl(url) {
   }
 }
 
+// Wrap bare URLs in the description HTML with anchor tags.
+// Splits on existing <a>...</a> blocks so already-linked URLs aren't double-wrapped.
+function linkify(html) {
+  const parts = html.split(/(<a[\s\S]*?<\/a>)/i);
+  return parts.map((part, i) => {
+    if (i % 2 !== 0) return part; // inside an existing <a> tag — leave it alone
+    return part.replace(/(https?:\/\/[^\s<"']+)/g, (url) => {
+      // Strip invisible Unicode joiners and trailing punctuation that isn't part of the URL
+      const clean = url.replace(/[\u2060\u200b\ufeff]+/g, '').replace(/[.,;:)]+$/, '');
+      return `<a href="${clean}" target="_blank" rel="noopener noreferrer">${clean}</a>`;
+    });
+  }).join('');
+}
+
 function slugFromTitle(title) {
   return title
     .toLowerCase()
@@ -109,7 +123,7 @@ module.exports = async function () {
         const pubDateStr = getText(item, 'pubDate');
 
         // Use content:encoded (rich HTML) when available, fall back to description
-        const description = getText(item, 'content:encoded') || getText(item, 'description');
+        const description = linkify(getText(item, 'content:encoded') || getText(item, 'description'));
         // Plain-text subtitle for cards/meta descriptions
         const plainDescription = getText(item, 'itunes:subtitle') || getText(item, 'description');
         const image = getAttr(item, 'itunes:image', 'href') || feedImage;
