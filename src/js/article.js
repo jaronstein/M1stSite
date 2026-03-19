@@ -26,7 +26,11 @@
       }
 
       function onFirstScroll() {
-        showPopup();
+        var scrolled = window.scrollY || window.pageYOffset;
+        var total = document.documentElement.scrollHeight - window.innerHeight;
+        if (total > 0 && scrolled / total >= 0.5) {
+          showPopup();
+        }
       }
 
       window.addEventListener('scroll', onFirstScroll, { passive: true });

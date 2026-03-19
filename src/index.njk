@@ -645,7 +645,13 @@ description: We help e-commerce directors doing $5M–$100M grow revenue per vis
     localStorage.setItem(POPUP_KEY, '1');
   }
 
-  function onFirstScroll() { showPopup(); }
+  function onFirstScroll() {
+    var scrolled = window.scrollY || window.pageYOffset;
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    if (total > 0 && scrolled / total >= 0.5) {
+      showPopup();
+    }
+  }
 
   window.addEventListener('scroll', onFirstScroll, { passive: true });
   document.getElementById('quiz-popup-close').addEventListener('click', closePopup);
