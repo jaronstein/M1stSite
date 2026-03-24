@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "clean-css": "^5.3.3",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "wrangler": "^4.77.0"
   }
 }
