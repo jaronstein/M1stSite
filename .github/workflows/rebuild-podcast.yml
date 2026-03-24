@@ -1,0 +1,32 @@
+name: Weekly Podcast Rebuild
+
+on:
+  schedule:
+    # Every Wednesday at 7:00 AM UTC (30 min after RSS updates at 6:30 AM)
+    - cron: '0 7 * * 3'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Deploy to Cloudflare
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
