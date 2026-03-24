@@ -10,6 +10,17 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
+  eleventyConfig.addFilter("autolink", (text) => {
+    if (!text) return '';
+    // Strip Unicode word-joiner characters Castos wraps around URLs
+    text = text.replace(/\u2060/g, '');
+    // Convert bare http/https URLs not already inside an href to clickable links
+    return text.replace(
+      /(?<!href=["'])https?:\/\/[^\s<>"]+/g,
+      (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
+    );
+  });
+
   eleventyConfig.addFilter("durationToSeconds", (duration) => {
     if (!duration) return null;
     const parts = duration.split(":").map(Number);

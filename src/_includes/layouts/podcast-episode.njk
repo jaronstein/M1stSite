@@ -105,7 +105,7 @@ layout: base.njk
     <!-- Episode Description -->
     {% if episode.description %}
     <div class="podcast-episode__description">
-      {{ episode.description | safe }}
+      {{ episode.description | autolink | safe }}
     </div>
     {% endif %}
 
