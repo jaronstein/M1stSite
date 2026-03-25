@@ -5,11 +5,14 @@ date: 2026-03-26T12:00:00
 author: Justin Aronstein
 description: "Six practical habits that keep Directors of E-Commerce employed: weekly Slack updates, pre-announcing bad news, and building a win inventory before you need it."
 podcast_episode_id: 2404617
+og_image: https://mobile1st.com/img/managing-up-link-preview.png
 ---
 
 On this week's Checkin to Checkout, Lauren Goodwin joins Justin to dig into the question every e-commerce brand needs to answer before any tactic makes sense: why you, why now? If you're building the case internally for where to invest next, it's worth a listen before you keep reading.
 
 ---
+
+<img src="/img/managing-up-link-preview.png" alt="Directors don't get fired for missing revenue — 94% of target hit, still got fired. 1.8yr average tenure. Six things that keep directors employed." style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;" />
 
 Someone I know hit 94% of their revenue target last year. The business was genuinely growing. The team was executing. The roadmap was smart.
 
