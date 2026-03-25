@@ -9,6 +9,8 @@ podcast_episode_id: 2404617
 
 On this week's Checkin to Checkout, Lauren Goodwin joins Justin to dig into the question every e-commerce brand needs to answer before any tactic makes sense: why you, why now? If you're building the case internally for where to invest next, it's worth a listen before you keep reading.
 
+---
+
 Someone I know hit 94% of their revenue target last year. The business was genuinely growing. The team was executing. The roadmap was smart.
 
 They were gone in 18 months.
