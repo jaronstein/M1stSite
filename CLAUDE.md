@@ -175,7 +175,7 @@ The `.eleventy.js` file defines:
 | Web3Forms | Form email delivery (to data@mobile1st.com) | `src/js/quiz.js` (contact form) |
 | Zaraz | Analytics event tracking | `src/js/quiz.js` (quiz events) |
 | Leadfeeder | B2B visitor identification | `src/_includes/base.njk` (tracking script) |
-| REB2B | B2B visitor identification | `src/_includes/base.njk` (tracking script) |
+| RB2B | B2B visitor identification | `src/_includes/base.njk` (tracking script) |
 | Google Calendar | Booking modals | `src/_includes/base.njk` (two iframe modals: booking + podcast guest) |
 
 ## Voice and Tone
