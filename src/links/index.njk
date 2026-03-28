@@ -42,6 +42,41 @@ description: "CRO, experimentation, and digital product growth for e-commerce di
     color: var(--teal);
   }
 
+  /* Section grouping */
+  .links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .links-section-heading {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 0.25rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .links-see-all {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--teal);
+    text-decoration: none;
+    padding: 0.3rem 0.25rem;
+    transition: color 0.15s;
+  }
+
+  .links-see-all:hover {
+    color: var(--forest);
+  }
+
   /* Stack of cards */
   .links-stack {
     display: flex;
@@ -243,28 +278,43 @@ description: "CRO, experimentation, and digital product growth for e-commerce di
       <div class="links-brand-tagline">Digital Product Growth</div>
     </div>
 
+    <!-- Recent Insights -->
+    <div class="links-section">
+      <div class="links-section-heading">Director's Cut Blog</div>
+      {% for post in collections.posts %}
+        {% if loop.index <= 3 %}
+          <a href="{{ post.url }}" class="link-card link-card-link">
+            <div class="link-card-inner">
+              <div class="link-card-title link-card-title-wrap">{{ post.data.title }}</div>
+              <div class="link-card-date">{{ post.data.date | readableDate }}</div>
+            </div>
+            <span class="link-arrow">→</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+      <a href="/news/" class="links-see-all">See all insights →</a>
+    </div>
+
+    <!-- Recent Podcast Episodes -->
+    <div class="links-section">
+      <div class="links-section-heading">Checkin to Checkout Episodes</div>
+      {% for ep in podcast.episodes %}
+        {% if loop.index <= 3 %}
+          <a href="/podcast/{{ ep.slug }}/" class="link-card link-card-link">
+            <img class="link-card-thumb" src="{{ ep.image }}" alt="" />
+            <div class="link-card-inner">
+              <div class="link-card-title">{{ ep.title }}</div>
+              <div class="link-card-date">{{ ep.readableDate }}</div>
+            </div>
+            <span class="link-arrow">→</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+      <a href="/podcast/" class="links-see-all">See all episodes →</a>
+    </div>
+
+    <!-- Site links -->
     <div class="links-stack">
-
-      <!-- Latest article -->
-      <a href="{{ collections.posts[0].url }}" class="link-card link-card-link">
-        <div class="link-card-inner">
-          <div class="link-card-label">Latest Insight</div>
-          <div class="link-card-title link-card-title-wrap">{{ collections.posts[0].data.title }}</div>
-          <div class="link-card-date">{{ collections.posts[0].data.date | readableDate }}</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-
-      <!-- Latest podcast episode -->
-      <a href="/podcast/{{ podcast.episodes[0].slug }}/" class="link-card link-card-link">
-        <img class="link-card-thumb" src="{{ podcast.episodes[0].image }}" alt="" />
-        <div class="link-card-inner">
-          <div class="link-card-label">Latest Podcast Episode</div>
-          <div class="link-card-title">{{ podcast.episodes[0].title }}</div>
-          <div class="link-card-date">{{ podcast.episodes[0].readableDate }}</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
 
       <!-- What We Do -->
       <a href="/#what-we-do" class="link-card link-card-link">
