@@ -9,9 +9,7 @@ description: "Stories from e-commerce leaders on how they got where they are, an
   <div class="podcast-index__header">
     <div class="container">
       <div class="podcast-index__hero">
-        {% if podcast.metadata.image %}
-        <img class="podcast-index__cover" src="{{ podcast.metadata.image }}" alt="Checkin to Checkout Podcast Cover" width="200" height="200" />
-        {% endif %}
+        <img class="podcast-index__cover" src="/img/podcast-cover.webp" alt="Checkin to Checkout Podcast Cover" width="200" height="200" fetchpriority="high" />
         <div class="podcast-index__info">
           <p class="podcast-index__eyebrow">The Podcast</p>
           <h1 class="podcast-index__title">Checkin to Checkout</h1>
