@@ -9,3 +9,6 @@
 
 /js/*
   Cache-Control: public, max-age=86400
+
+/cdn-cgi/zaraz/s.js
+  Cache-Control: public, max-age=3600
