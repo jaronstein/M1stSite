@@ -1,0 +1,317 @@
+---
+layout: base.njk
+title: "Mobile1st — Digital Product Growth"
+description: "CRO, experimentation, and digital product growth for e-commerce directors."
+---
+
+<style>
+  .site-header,
+  .site-footer { display: none !important; }
+
+  .links-page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f7fcfa 0%, #fff 60%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem 1.25rem 4rem;
+  }
+
+  .links-wrap {
+    width: 100%;
+    max-width: 460px;
+  }
+
+  /* Brand block */
+  .links-brand {
+    text-align: center;
+    margin-bottom: 2.25rem;
+  }
+
+  .links-brand img {
+    height: 44px;
+    width: auto;
+    margin-bottom: 0.75rem;
+  }
+
+  .links-brand-tagline {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+
+  /* Stack of cards */
+  .links-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  /* Base card */
+  .link-card {
+    display: block;
+    width: 100%;
+    background: #fff;
+    border: 1.5px solid var(--mint-dark);
+    border-radius: var(--radius-lg);
+    padding: 1.1rem 1.35rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease;
+    cursor: pointer;
+    font-family: var(--font-body);
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .link-card:hover {
+    border-color: var(--teal);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    transform: translateY(-1px);
+  }
+
+  /* Clickable link card (row layout with arrow) */
+  .link-card-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .link-card-inner {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .link-card-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+  }
+
+  .link-card-title {
+    font-size: 0.975rem;
+    font-weight: 600;
+    color: var(--forest);
+    line-height: 1.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: white-space 0s;
+  }
+
+  .link-card:hover .link-card-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  .link-card-title-wrap {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .link-card:hover .link-card-title-wrap {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  .link-card-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .link-card-thumb-wide {
+    width: auto;
+    max-width: 110px;
+    height: 60px;
+    aspect-ratio: 1.91 / 1;
+  }
+
+  .link-arrow {
+    font-size: 1.1rem;
+    color: var(--teal);
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  /* Book a Call card — dark */
+  .link-card-cta {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: #fff;
+  }
+
+  .link-card-cta .link-card-label {
+    color: rgba(234,246,242,0.65);
+  }
+
+  .link-card-cta .link-card-title {
+    color: #fff;
+  }
+
+  .link-card-cta .link-arrow {
+    color: var(--accent);
+  }
+
+  .link-card-cta:hover {
+    border-color: var(--teal);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  }
+
+  /* Newsletter card */
+  .link-card-newsletter {
+    background: var(--mint);
+    border-color: var(--mint-dark);
+  }
+
+  .link-card-newsletter .link-card-label {
+    color: var(--teal);
+  }
+
+  .link-card-newsletter .link-card-title {
+    margin-bottom: 1rem;
+  }
+
+  .links-subscribe {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .links-subscribe-input {
+    flex: 1 1 180px;
+    padding: 0.6rem 0.85rem;
+    border: 1.5px solid var(--mint-dark);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-family: var(--font-body);
+    color: var(--forest);
+    background: #fff;
+    outline: none;
+    min-width: 0;
+    transition: border-color 0.15s;
+  }
+
+  .links-subscribe-input:focus {
+    border-color: var(--teal);
+  }
+
+  .links-subscribe-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .links-subscribe .btn {
+    flex-shrink: 0;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.875rem;
+  }
+
+  .links-subscribe-success {
+    font-size: 0.875rem;
+    color: var(--teal);
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+</style>
+
+<main class="links-page">
+  <div class="links-wrap">
+
+    <!-- Brand -->
+    <div class="links-brand">
+      <img src="/img/logo.png" alt="Mobile1st" />
+      <div class="links-brand-tagline">Digital Product Growth</div>
+    </div>
+
+    <div class="links-stack">
+
+      <!-- Latest article -->
+      <a href="{{ collections.posts[0].url }}" class="link-card link-card-link">
+        <div class="link-card-inner">
+          <div class="link-card-label">Latest Insight</div>
+          <div class="link-card-title link-card-title-wrap">{{ collections.posts[0].data.title }}</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <!-- Latest podcast episode -->
+      <a href="/podcast/{{ podcast.episodes[0].slug }}/" class="link-card link-card-link">
+        <img class="link-card-thumb" src="{{ podcast.episodes[0].image }}" alt="" />
+        <div class="link-card-inner">
+          <div class="link-card-label">Latest Podcast Episode</div>
+          <div class="link-card-title">{{ podcast.episodes[0].title }}</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <!-- What We Do -->
+      <a href="/#what-we-do" class="link-card link-card-link">
+        <div class="link-card-inner">
+          <div class="link-card-label">Our Work</div>
+          <div class="link-card-title">What We Do</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <!-- Problems -->
+      <a href="/#problems" class="link-card link-card-link">
+        <div class="link-card-inner">
+          <div class="link-card-label">Sound Familiar?</div>
+          <div class="link-card-title">Here are the problems we solve</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <!-- Products -->
+      <a href="/#products" class="link-card link-card-link">
+        <div class="link-card-inner">
+          <div class="link-card-label">The Products</div>
+          <div class="link-card-title">How We Work with You</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <!-- Book a Call -->
+      <button class="link-card link-card-link link-card-cta" data-booking-modal>
+        <div class="link-card-inner">
+          <div class="link-card-label">30 Minutes</div>
+          <div class="link-card-title">Book a Call</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </button>
+
+      <!-- Newsletter signup -->
+      <div class="link-card link-card-newsletter">
+        <div class="link-card-label">Weekly Insights</div>
+        <div class="link-card-title">Get the Newsletter</div>
+        <form class="links-subscribe" data-subscribe-form>
+          <input
+            type="email"
+            name="email"
+            class="links-subscribe-input"
+            placeholder="you@yourcompany.com"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="btn btn-primary-dark">Subscribe</button>
+        </form>
+        <p class="subscribe-success links-subscribe-success" style="display:none">You're in. Check your inbox.</p>
+      </div>
+
+    </div>
+  </div>
+</main>
