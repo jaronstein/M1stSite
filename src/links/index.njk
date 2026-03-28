@@ -111,6 +111,12 @@ description: "CRO, experimentation, and digital product growth for e-commerce di
     text-overflow: unset;
   }
 
+  .link-card-date {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+
   .link-card-title-wrap {
     white-space: normal;
     overflow: visible;
@@ -244,6 +250,7 @@ description: "CRO, experimentation, and digital product growth for e-commerce di
         <div class="link-card-inner">
           <div class="link-card-label">Latest Insight</div>
           <div class="link-card-title link-card-title-wrap">{{ collections.posts[0].data.title }}</div>
+          <div class="link-card-date">{{ collections.posts[0].data.date | readableDate }}</div>
         </div>
         <span class="link-arrow">→</span>
       </a>
@@ -254,6 +261,7 @@ description: "CRO, experimentation, and digital product growth for e-commerce di
         <div class="link-card-inner">
           <div class="link-card-label">Latest Podcast Episode</div>
           <div class="link-card-title">{{ podcast.episodes[0].title }}</div>
+          <div class="link-card-date">{{ podcast.episodes[0].readableDate }}</div>
         </div>
         <span class="link-arrow">→</span>
       </a>
