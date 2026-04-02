@@ -6,13 +6,13 @@ layout: base.njk
 {
   "@context": "https://schema.org",
   "@type": "PodcastEpisode",
-  "name": {{ episode.title | dump }},
-  "description": {{ episode.plainDescription | dump }},
+  "name": {{ episode.title | dump | safe }},
+  "description": {{ episode.plainDescription | dump | safe }},
   "datePublished": "{{ episode.date }}",
   "url": "https://mobile1st.com/podcast/{{ episode.slug }}/",
   "associatedMedia": {
     "@type": "MediaObject",
-    "contentUrl": {{ episode.audioUrl | dump }}
+    "contentUrl": {{ episode.audioUrl | dump | safe }}
   },
   "partOfSeries": {
     "@type": "PodcastSeries",
@@ -26,11 +26,11 @@ layout: base.njk
 {
   "@context": "https://schema.org",
   "@type": "VideoObject",
-  "name": {{ episode.title | dump }},
-  "description": {{ episode.plainDescription | dump }},
-  "thumbnailUrl": {{ episode.ogImage | dump }},
+  "name": {{ episode.title | dump | safe }},
+  "description": {{ episode.plainDescription | dump | safe }},
+  "thumbnailUrl": {{ episode.ogImage | dump | safe }},
   "uploadDate": "{{ episode.date }}",
-  "contentUrl": {{ episode.audioUrl | dump }},
+  "contentUrl": {{ episode.audioUrl | dump | safe }},
   "publisher": {
     "@type": "Organization",
     "name": "Mobile1st",
