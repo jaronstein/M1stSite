@@ -2420,7 +2420,25 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   margin: 0;
 }
 
-/* Player */
+/* Hero video player — full-width, above the fold */
+.podcast-hero-player {
+  width: 100%;
+  background: #000;
+  margin-bottom: 1rem;
+}
+.podcast-hero-player__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+.podcast-hero-player .podcast-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Inline player (non-video episodes) */
 .podcast-player {
   max-width: 720px;
   margin: 0 auto 1.5rem;
@@ -2431,18 +2449,6 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   display: block;
   width: 100%;
   border: none;
-}
-.podcast-player--video {
-  background: #000;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.podcast-video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 .podcast-player--native {
   background: var(--mint);

@@ -42,8 +42,25 @@ layout: base.njk
 }
 </script>
 {% endif %}
-
 <div class="podcast-episode-page">
+
+  <!-- Video player: full-width, above the fold -->
+  {% if episode.audioType === "video/mp4" and episode.audioUrl %}
+  <div class="podcast-hero-player">
+    <div class="podcast-hero-player__inner">
+      <video
+        controls
+        preload="metadata"
+        class="podcast-video"
+        {% if episode.image %}poster="{{ episode.image }}"{% endif %}
+      >
+        <source src="{{ episode.audioUrl }}" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </div>
+  </div>
+  {% endif %}
+
   <div class="container">
 
     <a href="/podcast/" class="post-back">← All Episodes</a>
@@ -63,37 +80,27 @@ layout: base.njk
       </div>
     </div>
 
-    <!-- Player -->
-    {% if episode.audioType === "video/mp4" and episode.audioUrl %}
-    <div class="podcast-player podcast-player--video">
-      <video
-        controls
-        preload="metadata"
-        class="podcast-video"
-        {% if episode.image %}poster="{{ episode.image }}"{% endif %}
-      >
-        <source src="{{ episode.audioUrl }}" type="video/mp4">
-        Your browser does not support the video element.
-      </video>
-    </div>
-    {% elif episode.castosEpisodeId %}
-    <div class="podcast-player">
-      <iframe
-        src="https://6838ae27d7d6e1-61780196.castos.com/player/{{ episode.castosEpisodeId }}"
-        width="100%"
-        height="150"
-        frameborder="0"
-        scrolling="no"
-        title="{{ episode.title }}"
-      ></iframe>
-    </div>
-    {% elif episode.audioUrl %}
-    <div class="podcast-player podcast-player--native">
-      <audio controls preload="metadata" class="podcast-audio">
-        <source src="{{ episode.audioUrl }}" type="{{ episode.audioType }}">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+    <!-- Fallback players for non-video episodes -->
+    {% if episode.audioType !== "video/mp4" %}
+      {% if episode.castosEpisodeId %}
+      <div class="podcast-player">
+        <iframe
+          src="https://6838ae27d7d6e1-61780196.castos.com/player/{{ episode.castosEpisodeId }}"
+          width="100%"
+          height="150"
+          frameborder="0"
+          scrolling="no"
+          title="{{ episode.title }}"
+        ></iframe>
+      </div>
+      {% elif episode.audioUrl %}
+      <div class="podcast-player podcast-player--native">
+        <audio controls preload="metadata" class="podcast-audio">
+          <source src="{{ episode.audioUrl }}" type="{{ episode.audioType }}">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      {% endif %}
     {% endif %}
 
     <!-- Listen On -->
