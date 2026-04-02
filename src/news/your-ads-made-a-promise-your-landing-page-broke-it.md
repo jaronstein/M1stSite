@@ -29,6 +29,8 @@ Your ads are having 47 different conversations with 47 different people. Your la
 
 And it's the wrong one for most of them.
 
+![Your Ads Made a Promise. Your Landing Page Broke It.](/img/blog-header-your-ads-made-a-promise.png)
+
 ---
 
 ## The Protein Oatmeal Problem
