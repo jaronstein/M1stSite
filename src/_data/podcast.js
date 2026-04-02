@@ -1,7 +1,12 @@
 // Fetches the podcast RSS feed at build time and returns structured episode data.
 // Run `npm start` or `npm run build` to refresh.
 
+const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
+
 const RSS_URL = 'https://feeds.castos.com/oz5z5';
+const IMG_DIR = path.join(__dirname, '..', 'img', 'podcast');
 
 const PLATFORMS = [
   { name: 'Apple Podcasts', url: 'https://podcasts.apple.com/podcast/id1821016403' },
@@ -89,6 +94,28 @@ function toIsoDate(dateStr) {
   }
 }
 
+// Download a remote image, resize to 400x400 WebP, and save locally.
+// Returns the local URL path on success, or the original URL on failure.
+async function optimizeImage(remoteUrl, slug) {
+  const outPath = path.join(IMG_DIR, `${slug}.webp`);
+  // Skip if already cached locally
+  if (fs.existsSync(outPath)) return `/img/podcast/${slug}.webp`;
+  try {
+    const res = await fetch(remoteUrl);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const buffer = Buffer.from(await res.arrayBuffer());
+    await sharp(buffer)
+      .resize(400, 400, { fit: 'cover' })
+      .webp({ quality: 80 })
+      .toFile(outPath);
+    console.log(`[podcast.js] Optimized image: ${slug}.webp`);
+    return `/img/podcast/${slug}.webp`;
+  } catch (err) {
+    console.warn(`[podcast.js] Image optimization failed for ${slug}:`, err.message);
+    return remoteUrl; // fall back to Castos CDN
+  }
+}
+
 module.exports = async function () {
   try {
     const res = await fetch(RSS_URL);
@@ -148,6 +175,15 @@ module.exports = async function () {
         };
       })
       .filter(ep => ep.slug && ep.title);
+
+    // Download, resize, and self-host episode images as 400x400 WebP
+    fs.mkdirSync(IMG_DIR, { recursive: true });
+    await Promise.all(episodes.map(async (ep) => {
+      if (ep.image) {
+        ep.ogImage = ep.image; // preserve original full URL for OG tags / structured data
+        ep.image = await optimizeImage(ep.image, ep.slug);
+      }
+    }));
 
     // Group episodes by season, newest season first
     const seasonMap = {};

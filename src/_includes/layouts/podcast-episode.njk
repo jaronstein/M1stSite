@@ -28,7 +28,7 @@ layout: base.njk
   "@type": "VideoObject",
   "name": {{ episode.title | dump }},
   "description": {{ episode.plainDescription | dump }},
-  "thumbnailUrl": {{ episode.image | dump }},
+  "thumbnailUrl": {{ episode.ogImage | dump }},
   "uploadDate": "{{ episode.date }}",
   "contentUrl": {{ episode.audioUrl | dump }},
   "publisher": {
