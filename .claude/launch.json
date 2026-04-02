@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "mobile1st",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "npm", "start"],
       "port": 8080
     }
   ]
