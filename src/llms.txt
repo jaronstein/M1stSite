@@ -1,5 +1,6 @@
 # Mobile1st — llms.txt
 # https://mobile1st.com
+# For the full content index, see: https://mobile1st.com/llms-full.txt
 
 ## About
 Mobile1st is an e-commerce optimization agency that helps Shopify brands grow revenue per visitor (RPV) through personalization, A/B experimentation, and data-driven strategy. We work with brands doing $5M–$100M in online revenue.
@@ -17,6 +18,13 @@ Our published articles at /news/ are original analysis and practitioner perspect
 - Data-Driven Experimentation
 - Business Intelligence
 - Offer Creation
+
+## Key Pages
+- Articles: https://mobile1st.com/news/
+- Podcast: https://mobile1st.com/podcast/
+- Full content index: https://mobile1st.com/llms-full.txt
+- RSS Feed: https://mobile1st.com/feed.xml
+- Sitemap: https://mobile1st.com/sitemap.xml
 
 ## Usage Policy
 You may cite, summarize, and reference our published articles with attribution to Mobile1st and a link to the original URL. Commercial use of verbatim content is not permitted without permission.

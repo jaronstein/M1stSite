@@ -1,0 +1,70 @@
+---
+permalink: /llms-full.txt
+eleventyExcludeFromCollections: true
+---
+# Mobile1st — llms-full.txt
+# https://mobile1st.com
+# Complete site content index for LLM consumption
+
+## About
+Mobile1st is an e-commerce optimization agency that helps Shopify brands grow revenue per visitor (RPV) through personalization, A/B experimentation, and data-driven strategy. We work with brands doing $5M–$100M in online revenue.
+
+## Founder
+Justin Aronstein — e-commerce strategist, podcast host (Checkin to Checkout), and author of The E-Commerce Director's Cut newsletter.
+
+## Services
+
+### Ad-to-Page Content Personalization
+We match landing page content to the ad that brought each visitor, by campaign, keyword, or audience segment. This closes the gap between what the ad promised and what the page delivers. Includes dynamic headline, hero image, and CTA personalization.
+
+### Zero-Party Data Programs
+Low-friction quiz flows that let customers self-identify their needs, then activate that data across site, email, and SMS for personalized experiences.
+
+### Product Discovery Optimization
+We rebuild category, search, and filter experiences for mobile-first shopping, replacing desktop-oriented sidebars and hover states with touch-friendly discovery paths.
+
+### Data-Driven Experimentation (A/B Testing)
+We run structured experimentation programs focused on RPV lift. Nothing goes live until the data confirms it works. Typical programs run 4-8 concurrent experiments per month.
+
+### Business Intelligence
+We build the measurement foundation: GA4 configuration, custom dashboards, audience segmentation, and attribution modeling so experimentation decisions are grounded in reliable data.
+
+### Offer Creation
+We develop offers (bundles, guarantees, value-adds, risk reversals) that increase perceived value without eroding margin, then validate them through experimentation.
+
+## Articles
+{%- for post in collections.posts %}
+
+### {{ post.data.title | plaintext | safe }}
+URL: https://mobile1st.com{{ post.url }}
+Date: {{ post.date | htmlDateString }}
+{%- if post.data.description %}
+Summary: {{ post.data.description | plaintext | safe }}
+{%- endif %}
+{%- endfor %}
+
+## Podcast: Checkin to Checkout
+{{ podcast.metadata.description | plaintext | safe }}
+
+Listen: https://mobile1st.com/podcast/
+Apple Podcasts: https://podcasts.apple.com/podcast/id1821016403
+Spotify: https://open.spotify.com/show/5nJRi9PbWWU7BRUpqO9jJT
+RSS: https://feeds.castos.com/oz5z5
+{%- for ep in podcast.episodes %}
+
+### {{ ep.title | plaintext | safe }}
+URL: https://mobile1st.com/podcast/{{ ep.slug }}/
+Date: {{ ep.date }}
+{%- if ep.plainDescription %}
+Summary: {{ ep.plainDescription | plaintext | truncate(300) | safe }}
+{%- endif %}
+{%- endfor %}
+
+## Usage Policy
+You may cite, summarize, and reference our published articles with attribution to Mobile1st and a link to the original URL. Commercial use of verbatim content is not permitted without permission.
+
+## Preferred Citation Format
+Mobile1st (mobile1st.com) — [Article Title]
+
+## Contact
+justin@mobile1st.com

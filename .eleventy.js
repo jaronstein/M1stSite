@@ -29,6 +29,11 @@ module.exports = function (eleventyConfig) {
     return null;
   });
 
+  eleventyConfig.addFilter("plaintext", (str) => {
+    if (!str) return '';
+    return str.replace(/<[^>]+>/g, '').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n)).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&#39;/g, "'");
+  });
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("en-US", {
       year: "numeric", month: "long", day: "numeric",
