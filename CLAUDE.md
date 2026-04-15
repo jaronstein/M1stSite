@@ -116,6 +116,14 @@ Podcast episodes are auto-generated at build time from the Castos RSS feed. No m
 ### Adding episodes
 New episodes appear automatically when Castos publishes them and the site rebuilds. The weekly GitHub Actions workflow handles this. For an immediate update, push any commit to `main` or run the workflow manually.
 
+**Important: episode images must be committed to git.** The `podcast.js` data file downloads each episode's image from Castos and optimizes it to a 400x400 WebP in `src/img/podcast/`. However, Cloudflare's clean build environment may not persist these generated images through Eleventy's passthrough copy. To publish a new episode correctly:
+
+1. Run `npm run build` locally (this downloads and optimizes the new episode image)
+2. Commit the new `.webp` file from `src/img/podcast/` to git
+3. Push to `main`
+
+If you skip this, the episode page will show a broken image (404 on the local webp path).
+
 ## Quiz
 
 The quiz at `/quiz/` is a 5-question interactive form that recommends a Mobile1st product based on the visitor's answers.

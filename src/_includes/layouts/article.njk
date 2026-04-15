@@ -98,6 +98,23 @@ layout: base.njk
     </nav>
     {% endif %}
 
+    {% set relatedPosts = collections.posts | getRelatedPosts(currentUrl, 3) %}
+    {% if relatedPosts.length > 0 %}
+    <section class="related-posts" aria-label="More to read">
+      <h2 class="related-posts__heading">More to Read</h2>
+      <ul class="related-posts__list">
+        {% for related in relatedPosts %}
+        <li class="related-posts__item">
+          <a href="{{ related.url }}" class="related-posts__link">
+            <span class="related-posts__title">{{ related.data.title }}</span>
+            {% if related.data.description %}<span class="related-posts__desc">{{ related.data.description }}</span>{% endif %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
   </div>
 
 </article>

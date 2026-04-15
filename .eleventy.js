@@ -34,6 +34,73 @@ module.exports = function (eleventyConfig) {
     return str.replace(/<[^>]+>/g, '').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n)).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&#39;/g, "'");
   });
 
+  const STOPWORDS = new Set([
+    "a","an","the","and","or","but","in","on","at","to","for","of","with",
+    "by","from","is","it","its","as","be","was","are","were","has","have",
+    "had","do","does","did","not","this","that","these","those","your","our",
+    "their","how","what","why","when","who","will","can","should","would",
+    "could","if","we","you","they","he","she","i","my","me","us","them",
+    "all","just","more","most","some","any","one","two","three","four","five",
+    "no","so","up","out","about","than","then","there","here","now","get",
+    "into","over","after","before","right","left","new","old","good","best",
+  ]);
+
+  function tokenize(text) {
+    if (!text) return new Set();
+    return new Set(
+      text.toLowerCase()
+        .replace(/<[^>]+>/g, " ")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .split(/\s+/)
+        .filter(w => w.length > 3 && !STOPWORDS.has(w))
+    );
+  }
+
+  eleventyConfig.addFilter("getRelatedEpisodes", (allEpisodes, currentSlug, limit = 3) => {
+    if (!allEpisodes) return [];
+    const current = allEpisodes.find(e => e.slug === currentSlug);
+    if (!current) return allEpisodes.filter(e => e.slug !== currentSlug).slice(0, limit);
+
+    const currentTokens = tokenize(
+      (current.title || "") + " " + (current.plainDescription || "")
+    );
+
+    return allEpisodes
+      .filter(e => e.slug !== currentSlug)
+      .map(ep => {
+        const epTokens = tokenize(
+          (ep.title || "") + " " + (ep.plainDescription || "")
+        );
+        const overlap = [...currentTokens].filter(w => epTokens.has(w)).length;
+        return { ep, score: overlap };
+      })
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map(({ ep }) => ep);
+  });
+
+  eleventyConfig.addFilter("getRelatedPosts", (allPosts, currentUrl, limit = 3) => {
+    const current = allPosts.find(p => p.url === currentUrl);
+    if (!current) return allPosts.filter(p => p.url !== currentUrl).slice(0, limit);
+
+    const currentTokens = tokenize(
+      (current.data.title || "") + " " + (current.data.description || "")
+    );
+
+    return allPosts
+      .filter(p => p.url !== currentUrl)
+      .map(post => {
+        const postTokens = tokenize(
+          (post.data.title || "") + " " + (post.data.description || "")
+        );
+        const overlap = [...currentTokens].filter(w => postTokens.has(w)).length;
+        return { post, score: overlap };
+      })
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map(({ post }) => post);
+  });
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("en-US", {
       year: "numeric", month: "long", day: "numeric",

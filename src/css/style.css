@@ -1190,6 +1190,72 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   line-height: 1.35;
 }
 
+/* ---- Related posts ---- */
+.related-posts {
+  max-width: 720px;
+  margin: 3rem auto 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid #e5e5e5;
+}
+.related-posts__heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.related-posts__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.related-posts__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  transition: border-color 0.15s, background 0.15s;
+}
+.related-posts__link:hover {
+  border-color: var(--accent);
+  background: var(--mint);
+}
+.related-posts__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--forest);
+  line-height: 1.35;
+}
+.related-posts__desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+.related-posts__link--episode {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.85rem;
+}
+.related-posts__ep-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.related-posts__ep-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 /* ---- Post subscribe block ---- */
 .post-subscribe {
   max-width: 720px;

@@ -10,14 +10,27 @@ layout: base.njk
   "description": {{ episode.plainDescription | dump | safe }},
   "datePublished": "{{ episode.date }}",
   "url": "https://mobile1st.com/podcast/{{ episode.slug }}/",
+  {% if episode.image %}"image": {{ episode.image | dump | safe }},{% endif %}
+  {% if episode.duration %}"timeRequired": "PT{{ episode.duration | durationToSeconds }}S",{% endif %}
   "associatedMedia": {
     "@type": "MediaObject",
     "contentUrl": {{ episode.audioUrl | dump | safe }}
   },
+  "actor": {
+    "@type": "Person",
+    "name": "Justin Aronstein",
+    "url": "https://mobile1st.com/about/"
+  },
   "partOfSeries": {
     "@type": "PodcastSeries",
     "name": "Checkin to Checkout",
-    "url": "https://mobile1st.com/podcast/"
+    "url": "https://mobile1st.com/podcast/",
+    "image": "https://mobile1st.com/img/og-default.png",
+    "author": {
+      "@type": "Person",
+      "name": "Justin Aronstein",
+      "url": "https://mobile1st.com/about/"
+    }
   }
 }
 </script>
@@ -132,6 +145,26 @@ layout: base.njk
       <a href="/podcast/" class="btn btn-outline-dark">← Back to All Episodes</a>
       <button class="btn btn-outline-dark" data-podcast-modal>Apply to Be a Guest →</button>
     </div>
+
+    {% set relatedEpisodes = podcast.episodes | getRelatedEpisodes(episode.slug, 3) %}
+    {% if relatedEpisodes.length > 0 %}
+    <section class="related-posts" aria-label="More episodes">
+      <h2 class="related-posts__heading">More Episodes</h2>
+      <ul class="related-posts__list">
+        {% for ep in relatedEpisodes %}
+        <li class="related-posts__item">
+          <a href="/podcast/{{ ep.slug }}/" class="related-posts__link related-posts__link--episode">
+            {% if ep.image %}<img src="{{ ep.image }}" alt="{{ ep.title }}" class="related-posts__ep-img" width="64" height="64" />{% endif %}
+            <span class="related-posts__ep-text">
+              <span class="related-posts__title">{{ ep.title }}</span>
+              {% if ep.plainDescription %}<span class="related-posts__desc">{{ ep.plainDescription | truncate(120) }}</span>{% endif %}
+            </span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
 
   </div>
 </div>
