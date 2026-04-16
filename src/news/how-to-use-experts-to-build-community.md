@@ -78,6 +78,8 @@ The competitors in that race are the most credible validators BPN could ever hav
 
 Meanwhile, every fan of those athletes (and there are thousands of them) is watching the BPN live stream. Not because they were targeted with a Facebook ad. Because someone they already follow is competing, and the race is compelling enough to check back every single hour.
 
+At one point I opened the stream and over 15,000 people were watching. On a brand Instagram account. For a supplement company. Who wouldn't want that kind of viewership?
+
 The experts are the show. The masses are the audience. And the brand owns the stage.
 
 <div id="inline-cta-anchor"></div>
