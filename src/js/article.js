@@ -12,7 +12,6 @@
       function showPopup() {
         if (shown) return;
         shown = true;
-        window.removeEventListener('scroll', onFirstScroll);
         overlay.classList.add('is-open');
         overlay.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -25,15 +24,7 @@
         localStorage.setItem(POPUP_KEY, '1');
       }
 
-      function onFirstScroll() {
-        var scrolled = window.scrollY || window.pageYOffset;
-        var total = document.documentElement.scrollHeight - window.innerHeight;
-        if (total > 0 && scrolled / total >= 0.5) {
-          showPopup();
-        }
-      }
-
-      window.addEventListener('scroll', onFirstScroll, { passive: true });
+      setTimeout(showPopup, 7000);
 
       document.getElementById('nl-popup-close').addEventListener('click', closePopup);
       document.getElementById('nl-popup-dismiss').addEventListener('click', closePopup);
