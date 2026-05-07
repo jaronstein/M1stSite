@@ -1,0 +1,234 @@
+---
+layout: base.njk
+title: "Free PDP Audit Prompt — 22 Research-Backed Tactics | Mobile1st"
+description: "Free Claude prompt that scores any product detail page across 22 tactics from Baymard, NN/g, and Shopify. Get a letter grade and the top 3 fixes that move RPV."
+---
+
+<style>
+  .pdp-hero {
+    padding: 5rem 1.25rem 2.5rem;
+    background: linear-gradient(180deg, #f7fcfa 0%, #fff 100%);
+  }
+
+  .pdp-hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pdp-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1rem;
+  }
+
+  .pdp-hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    line-height: 1.15;
+    color: var(--forest);
+    margin: 0 0 1rem;
+  }
+
+  .pdp-hero p.lede {
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0 auto 2rem;
+  }
+
+  .pdp-cta-row {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .pdp-cta-row .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .pdp-copy-feedback {
+    font-size: 0.85rem;
+    color: var(--teal);
+    font-weight: 600;
+    min-height: 1.2em;
+  }
+
+  .pdp-section {
+    padding: 3rem 1.25rem;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .pdp-section h2 {
+    font-size: 1.5rem;
+    color: var(--forest);
+    margin: 0 0 1rem;
+  }
+
+  .pdp-section p {
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0 0 1rem;
+  }
+
+  .pdp-tier-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .pdp-tier {
+    border: 1.5px solid var(--mint-dark);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    background: #fff;
+  }
+
+  .pdp-tier-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.35rem;
+  }
+
+  .pdp-tier-body {
+    font-size: 0.95rem;
+    color: var(--forest);
+    line-height: 1.5;
+  }
+
+  .pdp-how {
+    background: var(--mint);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.75rem;
+    margin: 2rem 0;
+  }
+
+  .pdp-how ol {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--forest);
+    line-height: 1.7;
+  }
+
+  .pdp-how li {
+    margin-bottom: 0.5rem;
+  }
+
+  .pdp-sources {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--mint-dark);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .pdp-final-cta {
+    background: var(--forest);
+    color: #fff;
+    padding: 3rem 1.25rem;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    margin: 3rem auto;
+    max-width: 760px;
+  }
+
+  .pdp-final-cta h2 {
+    color: #fff;
+    margin: 0 0 0.75rem;
+  }
+
+  .pdp-final-cta p {
+    color: rgba(255,255,255,0.8);
+    margin: 0 0 1.5rem;
+  }
+</style>
+
+<section class="pdp-hero">
+  <div class="pdp-hero-inner">
+    <div class="pdp-eyebrow">Free Tool</div>
+    <h1>The 22-Tactic PDP Audit Prompt</h1>
+    <p class="lede">
+      Paste this into Claude. Hand it your product page. Get a scorecard, a letter grade, and a ranked list of fixes — backed by Baymard, Nielsen Norman Group, and Shopify research. Built for e-commerce teams who want to fix the obvious stuff fast.
+    </p>
+    <div class="pdp-cta-row">
+      <a href="/files/pdp-audit-prompt.md" download class="btn btn-primary-dark">Download the prompt (.md)</a>
+      <button id="copyPromptBtn" class="btn btn-outline">Copy to clipboard</button>
+    </div>
+    <div class="pdp-copy-feedback" id="copyFeedback" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="pdp-section">
+  <h2>What you get</h2>
+  <p>The prompt scores a product page across 22 tactics that directly affect Revenue Per Visitor (RPV = Conversion Rate × Average Order Value). Each tactic is sorted into one of four impact tiers so you know where to focus first.</p>
+
+  <div class="pdp-tier-list">
+    <div class="pdp-tier">
+      <div class="pdp-tier-label">Very High Impact</div>
+      <div class="pdp-tier-body">Hero image &amp; gallery, above-fold value prop, reviews UX, add-to-cart UX. Test these first.</div>
+    </div>
+    <div class="pdp-tier">
+      <div class="pdp-tier-label">High Impact</div>
+      <div class="pdp-tier-body">Shipping &amp; total cost, variant selectors, bundling, price framing, descriptive image overlays, urgency cues, page speed.</div>
+    </div>
+    <div class="pdp-tier">
+      <div class="pdp-tier-label">Medium Impact</div>
+      <div class="pdp-tier-body">Content layout, payment flexibility, trust badges, save/wishlist, product video/UGC, subscribe &amp; save, gifting.</div>
+    </div>
+    <div class="pdp-tier">
+      <div class="pdp-tier-label">Low Impact</div>
+      <div class="pdp-tier-body">Human model images, Q&amp;A, recently viewed, size/fit technology.</div>
+    </div>
+  </div>
+
+  <div class="pdp-how">
+    <h2 style="margin-top:0">How to use it</h2>
+    <ol>
+      <li>Download or copy the prompt above.</li>
+      <li>Paste it into a fresh Claude conversation.</li>
+      <li>Give it your product page URL or paste in screenshots.</li>
+      <li>Get a 22-row scorecard, a letter grade, and the top 3 fixes ranked by impact.</li>
+      <li>Take the top fix to your A/B testing platform and run it.</li>
+    </ol>
+  </div>
+
+  <p class="pdp-sources">
+    <strong>Sourced from:</strong> Baymard Institute (200,000+ hours of UX research, 30,000+ usability scores), Nielsen Norman Group (108 PDP guidelines tested across 350+ sites in 5 countries), and Shopify platform data validated by a Big Three management consulting study.
+  </p>
+</section>
+
+<div class="pdp-final-cta">
+  <h2>Want us to run the audit for you?</h2>
+  <p>If you'd rather have a team that does this for a living dig into your PDP and build the experiment roadmap, that's literally what we do.</p>
+  <button class="btn btn-primary" data-booking-modal>Book a 30-minute call</button>
+</div>
+
+<script>
+(function() {
+  const btn = document.getElementById('copyPromptBtn');
+  const feedback = document.getElementById('copyFeedback');
+  if (!btn) return;
+
+  btn.addEventListener('click', async function() {
+    feedback.textContent = '';
+    try {
+      const res = await fetch('/files/pdp-audit-prompt.md');
+      const text = await res.text();
+      await navigator.clipboard.writeText(text);
+      feedback.textContent = 'Copied. Now paste it into Claude.';
+    } catch (err) {
+      feedback.textContent = 'Copy failed — try the download button instead.';
+    }
+  });
+})();
+</script>
