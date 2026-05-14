@@ -33,7 +33,7 @@ An outcome is "work a full day at the coffee shop without hunting for an outlet 
 
 One of those sentences explains the product. The other one sells it.
 
-Simon Sinek said this ten years ago in his TED Talk, start with the why. It's been watched 60 million times. And yet 90% of e-commerce product pages are still leading with the what.
+Most product pages are still leading with the what.
 
 ---
 
