@@ -63,6 +63,14 @@ These bubbles shifted and changed in real-time based on the user's live browsing
 
 We ran the experiment for over a month. The result? A **4.5% increase in RPV**.
 
+But the headline number doesn't tell the most interesting part of the story. The secondary metrics are where it gets really interesting.
+
+Only about **20% of first-time visitors** interacted with the new bubble bar. That's expected. A first-time visitor doesn't have enough behavioral signal yet for the personalization to feel earned, and they're often still figuring out what the brand even is.
+
+But for **repeat visitors, interaction rates jumped to over 40%**. The bar got smarter the more someone browsed, and that compounding relevance is exactly what kept them clicking.
+
+Here's why that matters: returning visitors (people who'd been to the site more than twice) made up **over 75% of total revenue**. So the RPV lift on the segment that actually drives the business was significantly higher than the blended 4.5% number suggests. We were moving the right people, not just inflating an average across cold traffic.
+
 And because this mechanism was built into the global header layout, it impacted **100% of the site's traffic**. That is massive revenue left on the table if you're just letting a black-box widget guess individual SKU preferences. There is still a ton of optimization work to be done on fine-tuning our algorithm and content sets, but this exact architecture can, and should, be applied to every single part of an e-commerce site.
 
 ---
