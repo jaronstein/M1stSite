@@ -1147,6 +1147,25 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 .post-body blockquote p { color: var(--forest); font-weight: 500; margin: 0; }
+.post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.post-body th {
+  text-align: left;
+  color: var(--forest);
+  background: var(--mint);
+  padding: 0.6rem 0.85rem;
+  border-bottom: 2px solid var(--accent);
+}
+.post-body td {
+  color: var(--text-muted);
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--mint-dark);
+  vertical-align: top;
+}
 .post-footer {
   max-width: 720px;
   margin: 3.5rem auto 0;
