@@ -7,6 +7,22 @@ description: "Five image variations of the same idea isn't five pieces of creati
 inline_cta: personalization
 ---
 
+<aside class="promo-callout">
+  <p class="promo-callout__eyebrow">Before you read: this is the problem we solve.</p>
+  <p class="promo-callout__lead">Throughline reshapes your landing page to match the exact ad someone clicked, automatically.</p>
+  <ul class="promo-callout__list">
+    <li><strong>Real message match, at scale.</strong> Every ad gets a page that delivers on its promise, no matter how many angles you run.</li>
+    <li><strong>Higher conversion rates.</strong> Customers see lifts of around 40% when the page finally matches the ad.</li>
+    <li><strong>Zero tech setup.</strong> One snippet, once. No dev tickets, no replatforming, no waiting on engineering.</li>
+    <li><strong>Approve from Slack.</strong> Changes come to you as a simple message. Thumbs up to go live.</li>
+    <li><strong>Prove it before you trust it.</strong> Built-in A/B testing splits traffic so you see the lift in your own numbers, not ours.</li>
+    <li><strong>It won't break your site.</strong> Every change is checked for layout and functionality before it can go live.</li>
+    <li><strong>Stays current on its own.</strong> When your page changes, Throughline self-heals so your matches never go stale.</li>
+  </ul>
+  <p class="promo-callout__offer">Try it free for 30 days. Then $500/month. No contracts, no surprises.</p>
+  <a class="promo-callout__cta" href="mailto:justin@mobile1st.com?subject=Throughline%20free%20trial">Email me at justin@mobile1st.com to start your free trial</a>
+</aside>
+
 You did everything right.
 
 You've got your pages dialed in: your core product pages, and maybe you even spun up special collection pages for that product drop. Tight, specific, highly targeted. While you were at it, you built creative for the drop. Some ads point at the collection page, some point at the product pages. Clean setup.
