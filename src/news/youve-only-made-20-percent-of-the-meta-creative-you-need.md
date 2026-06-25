@@ -19,7 +19,7 @@ inline_cta: personalization
     <li><strong>It won't break your site.</strong> Every change is checked for layout and functionality before it can go live.</li>
     <li><strong>Stays current on its own.</strong> When your page changes, Throughline self-heals so your matches never go stale.</li>
   </ul>
-  <p class="promo-callout__offer">Try it free for 30 days. Then $500/month. No contracts, no surprises.</p>
+  <p class="promo-callout__offer">Try it free for 30 days. Then as low as $500/month. No contracts, no surprises.</p>
   <a class="promo-callout__cta" href="mailto:justin@mobile1st.com?subject=Throughline%20free%20trial">Email me at justin@mobile1st.com to start your free trial</a>
 </aside>
 
