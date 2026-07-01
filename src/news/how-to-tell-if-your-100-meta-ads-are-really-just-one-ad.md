@@ -95,3 +95,10 @@ If the grid comes back lopsided, your next creative brief has already written it
 ## Coverage was always the metric
 
 Volume was never the real metric. Coverage is. A hundred ads that say one thing to one person add up to a beautifully produced blind spot. The brands that actually scale run ads that reach different customers and meet them at different points in their journey. They are not re-dressing one ad a hundred times.
+
+<aside class="promo-callout">
+  <p class="promo-callout__eyebrow">Not sure where you stand?</p>
+  <p class="promo-callout__lead">Get a free Creative Diversity Audit.</p>
+  <p class="promo-callout__offer">Send us your active ads. In 5 days, we'll tell you which persona, stage, and cell is overrepresented, and exactly which creative you should be making more of.</p>
+  <a class="promo-callout__cta" href="mailto:justin@mobile1st.com?subject=Free%20Creative%20Diversity%20Audit">Email me at justin@mobile1st.com to request your free audit</a>
+</aside>
