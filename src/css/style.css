@@ -2051,6 +2051,16 @@ p  { font-size: 1.05rem; line-height: 1.75; }
 .promo-callout__cta:hover {
   filter: brightness(1.05);
 }
+.promo-callout__video {
+  margin: 0 0 1.25rem;
+}
+.promo-callout__video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  background: #000;
+}
 @media (max-width: 480px) {
   .promo-callout { padding: 1.5rem 1.25rem; }
   .promo-callout__lead { font-size: 1.05rem; }
