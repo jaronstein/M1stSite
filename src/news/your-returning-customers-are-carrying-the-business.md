@@ -4,6 +4,7 @@ title: "Your Returning Customers Are Carrying the Business. You've Never Asked T
 date: 2026-07-15
 author: Justin Aronstein
 description: "20% of sessions. 77% of revenue. And most brands still treat every visitor the same."
+og_image: "https://mobile1st.com/img/blog-header-returning-visitors-stat.png"
 inline_cta: zero-party
 ---
 
@@ -12,6 +13,8 @@ I was digging through GA4 for a specialty retailer client recently, the kind of 
 Returning visitors made up 20% of sessions.
 
 They made up 77% of revenue.
+
+![Returning visitors punch way above their weight: 20% of sessions, 77% of revenue](/img/blog-header-returning-visitors-stat.png)
 
 I sat with that for a minute. Every experienced e-commerce person has a rough sense that repeat visitors convert better. But 77% isn't "convert better." That's four out of every five dollars, coming from one out of every five people, and when I asked the team what they actually knew about that 20%, the answer was nothing. No name. No email. No mechanism for anyone to say "hey, it's me again."
 
