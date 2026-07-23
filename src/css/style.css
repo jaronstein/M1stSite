@@ -1166,6 +1166,87 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   border-bottom: 1px solid var(--mint-dark);
   vertical-align: top;
 }
+
+/* ---- Ad-to-page comparison (message-match articles) ---- */
+.mm-verdict {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin: 0 0 0.85rem;
+}
+.mm-verdict--good { color: var(--teal); background: var(--mint); }
+.mm-verdict--bad { color: #a3342b; background: #fbeae7; }
+.mm-compare {
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+  gap: 14px;
+  margin: 1.5rem 0 0.6rem;
+}
+.mm-compare__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.mm-compare__browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 9px;
+  border: 1px solid var(--mint-dark);
+  border-bottom: none;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--white);
+}
+.mm-compare__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--mint-dark); flex-shrink: 0; }
+.mm-compare__url {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-left: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mm-compare__frame {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mint);
+  border: 1px solid var(--mint-dark);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.mm-compare__browser-bar + .mm-compare__frame { border-radius: 0 0 var(--radius) var(--radius); }
+.mm-compare__frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.mm-compare__caption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0.65rem 0 1.75rem;
+}
+@media (max-width: 600px) {
+  .mm-compare { grid-template-columns: 1fr; }
+  .mm-compare__frame { height: 240px; }
+}
+.mm-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  background: var(--mint);
+  border: 1px solid var(--mint-dark);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.mm-stat-row__num { font-size: 1.9rem; font-weight: 700; color: var(--forest); line-height: 1.1; }
+.mm-stat-row__lbl { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem; }
+
 .post-footer {
   max-width: 720px;
   margin: 3.5rem auto 0;
