@@ -2070,15 +2070,17 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   border-radius: 10px;
   border-left: 4px solid var(--accent);
 }
-.promo-callout__eyebrow {
+.promo-callout__eyebrow,
+.post-body .promo-callout__eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--mint);
   font-weight: 600;
   margin: 0 0 0.5rem;
 }
-.promo-callout__lead {
+.promo-callout__lead,
+.post-body .promo-callout__lead {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 600;
@@ -2093,7 +2095,8 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   display: grid;
   gap: 0.75rem;
 }
-.promo-callout__list li {
+.promo-callout__list li,
+.post-body .promo-callout__list li {
   position: relative;
   padding-left: 1.5rem;
   font-size: 0.95rem;
@@ -2110,19 +2113,22 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   border-radius: 50%;
   background: var(--accent);
 }
-.promo-callout__list strong {
+.promo-callout__list strong,
+.post-body .promo-callout__list strong {
   color: var(--white);
   font-weight: 600;
 }
-.promo-callout__offer {
+.promo-callout__offer,
+.post-body .promo-callout__offer {
   font-weight: 600;
   color: var(--white);
   margin: 0 0 1.25rem;
 }
-.promo-callout__cta {
+.promo-callout__cta,
+.post-body .promo-callout__cta {
   display: inline-block;
   background: var(--accent);
-  color: var(--forest);
+  color: #082019;
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
