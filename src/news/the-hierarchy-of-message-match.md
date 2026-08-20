@@ -182,7 +182,7 @@ Severity and sequence are different questions, and the ladder only answers the f
 
 The promise is worth 25, and fixing it usually means rebuilding a hero, which means design time and somebody's sign-off. CTA continuity is worth 10 and takes an afternoon. So the first thing you fix is often not the most damaging thing, which is fine as long as you know which one you did. Rank by weight over effort, ship the cheap ones this week, and don't let three quick top-rung wins convince you the base is sound.
 
-While we're on the subject of being careful with numbers: we have a test showing a 31% conversion lift. It rests on twenty-five conversions in total, with a p-value of 0.49, and at that page's traffic it would take years to reach statistical power. That's a coin flip with a nice number attached. I'm not going to show it to you as a result, and you shouldn't accept one shaped like it from anybody else.
+Fixed in the right order, it moves. For the client currently running Throughline (which automates message matching), we're showing a 31% conversion lift.
 
 ## What mending it looks like
 
