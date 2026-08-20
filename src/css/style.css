@@ -1166,6 +1166,16 @@ p  { font-size: 1.05rem; line-height: 1.75; }
   border-bottom: 1px solid var(--mint-dark);
   vertical-align: top;
 }
+/* On a phone a table whose min-content width exceeds the column was being
+   clipped, not scrolled — the last column simply vanished. display:block lets
+   the row group overflow the box so it can scroll instead. */
+@media (max-width: 600px) {
+  .post-body table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 /* ---- Ad-to-page comparison (message-match articles) ---- */
 .mm-verdict {
