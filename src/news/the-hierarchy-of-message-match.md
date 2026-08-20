@@ -34,9 +34,9 @@ These are the weights we run in production, and we audited them against 298 real
 
 Three brands, three rungs. Every score below comes from a live capture of the page on 19 August 2026.
 
-## Rung 1: OLIPOP
+## Rung 1: The Promise
 
-<span class="mm-verdict mm-verdict--bad">Promise dropped</span>
+<span class="mm-verdict mm-verdict--bad">Dropped</span>
 
 <div class="mm-compare">
   <div>
@@ -63,9 +63,9 @@ The ad sold a reunion in vanilla blossoms. The page sold fiber.
 
 This is the most common failure I see and the least discussed, because it doesn't look like a mistake in a spreadsheet. The traffic arrived. The product was available for purchase. Every dashboard says this worked.
 
-## Rung 2: Magic Spoon
+## Rung 2: The Offer
 
-<span class="mm-verdict mm-verdict--bad">Offer dropped</span>
+<span class="mm-verdict mm-verdict--bad">Dropped</span>
 
 <div class="mm-compare">
   <div>
@@ -92,7 +92,7 @@ I like this example because you can feel it without knowing anything about optim
 
 Rung 2 is also the cheapest rung on the ladder to hold. Nobody has to rebuild a hero to put a promo code on a page. It fails constantly anyway, because the ad was made by the team running the promotion and the page was made by the team running the site, and the promotion has an end date nobody told the page about.
 
-## Rung 3: Hiya Health
+## Rung 3: The Claim
 
 <span class="mm-verdict mm-verdict--bad">Claims dropped</span>
 
@@ -105,7 +105,7 @@ Rung 2 is also the cheapest rung on the ladder to hold. Nobody has to rebuild a 
 </div>
 <p class="mm-compare__caption">One ad for four products, landing on one of them. The ad's creative is no longer retrievable — it stopped running, and Meta keeps no inactive ads for this page — so its wording is quoted below verbatim.</p>
 
-I'll print the whole readout for this one so you can check our work. Hiya ran this ad from 17 March, and its copy covers the product line:
+Hiya ran this ad from 17 March, and its copy covers the whole product line. I'll print the full readout for this one so you can check our work:
 
 > Multivitamin: 15+ essential vitamins and minerals for complete nutrition
 >
