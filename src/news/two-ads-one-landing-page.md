@@ -130,3 +130,5 @@ The ones you can't check off are the gaps. Most of the time you'll find the page
 Do that five times and you'll know whether this is a problem in your account. It took us longer to explain than it'll take you to run.
 
 Doing it by hand works. It stops working around ad six. Every ad checked against the page it points at, re-checked as new creative ships, is the job we built [Throughline](/news/the-message-match-gap/) to do, for email campaigns and the pages their links land on as much as for ads. Everything ships as a split test, and nothing serves until you approve it.
+
+[If you want help setting this up, let me know.](mailto:justin@mobile1st.com?subject=Help%20setting%20up%20message%20match%20on%20my%20ads)
