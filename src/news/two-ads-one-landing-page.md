@@ -4,9 +4,11 @@ title: "Two Ads, One Landing Page, and a Rebuild That Only Worked for One of The
 date: 2026-08-27
 author: Justin Aronstein
 description: "A golf-apparel brand ran two ads to the same collection page. We rebuilt that page for both. Only one of them needed it, and that is the whole finding."
-og_image: "https://mobile1st.com/img/message-match-twoads-grid.jpg"
+og_image: "https://mobile1st.com/img/blog-header-two-ads-one-page.png"
 inline_cta: experimentation
 ---
+
+![Two ads pointing at the same landing page: the still ad connects cleanly, the video ad's connection is broken](/img/blog-header-two-ads-one-page.png)
 
 A golf-apparel brand we work with dropped a collection this summer. Two ads went out for it in the same week, both pointing at the same collection page.
 
@@ -102,6 +104,8 @@ The grid ad, the one that already matched:
 | Revenue per visitor | $0.91 | $0.88 |
 
 Flat. Slightly down, inside the range you'd expect from a coin flip.
+
+![Dumbbell chart: the video ad's conversion rate moves from 0.42% to 0.94%, a long jump; the grid ad barely moves, from 0.69% to 0.62%](/img/two-ads-results-chart.png)
 
 ## The flat one is the interesting one
 
