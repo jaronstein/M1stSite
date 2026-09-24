@@ -24,15 +24,12 @@ Every one of those changes got a real trial. And every one eventually got knocke
 
 The basis is the same whether you're making breakfast or moving revenue for a business: stay open to trying something new, and keep looking for where you can improve. Experiments come in a lot of shapes. Sometimes it's an A/B test, sometimes it's just making a change and reading the tea leaves, but the work behind it is the same either way: talk to customers, look at the business intelligence you've got, form a hypothesis, and make a change big enough that people actually notice it.
 
-A few things held up on both the stove and the website.
+A few things held up on both the stove and the website:
 
-You need more than one try to know if you love or hate something. A single morning tells you almost nothing. Run it for a week or two before you trust your own reaction.
-
-Make the change big enough to notice. A pinch more paprika won't tell you anything. Add enough that you can taste the difference, then dial it back if it's too much.
-
-Don't be afraid to change more than one thing at once. The goal isn't to isolate which variable moved the needle, it's to make the best tofu, or the best site. Change things together, read what happened, and decide what to touch next. You can always pare back the changes later if you need to know which one mattered.
-
-Use inspiration, don't copy it outright. Their za'atar ratio, their homepage, their onboarding flow: none of it was built for your kitchen or your customers. It's a fine starting point. It's never the finish line.
+1. You need more than one try to know if you love or hate something. A single morning tells you almost nothing. Run it for a week or two before you trust your own reaction.
+2. Make the change big enough to notice. A pinch more paprika won't tell you anything. Add enough that you can taste the difference, then dial it back if it's too much.
+3. Don't be afraid to change more than one thing at once. The goal isn't to isolate which variable moved the needle, it's to make the best tofu, or the best site. Change things together, read what happened, and decide what to touch next. You can always pare back the changes later if you need to know which one mattered.
+4. Use inspiration, don't copy it outright. Their za'atar ratio, their homepage, their onboarding flow: none of it was built for your kitchen or your customers. It's a fine starting point. It's never the finish line.
 
 Seven years in, we're still not done, and we don't expect to be. The tofu we make tonight is built for the four of us, in this kitchen, this month. In another year, something will change, and we'll change the tofu with it.
 
@@ -42,8 +39,19 @@ For speed and convenience on a weekday morning.
 
 **Ingredients:**
 
-1 block of tofu, lightly pressed and hand-torn. Oil (don't be shy). Nutritional yeast, eyeballed until every piece is coated. A large splash of paprika. A half splash of za'atar. A half splash of turmeric. Optional: sugar.
+- 1 block of tofu, lightly pressed and hand-torn
+- Oil (don't be shy)
+- Nutritional yeast, eyeballed until every piece is coated
+- A large splash of paprika
+- A half splash of za'atar
+- A half splash of turmeric
+- Optional: sugar
 
 **Steps:**
 
-Tear the tofu onto a baking sheet lined with parchment (we reuse the same sheet of parchment the next morning). Pour the oil over the tofu and mix. In a separate bowl, mix the dry ingredients. Pour the dry mix over the tofu and mix again. Bake at 400°F for 29 minutes. The next morning, reheat at 300°F for 10 minutes while you make coffee.
+- Tear the tofu onto a baking sheet lined with parchment (we reuse the same sheet of parchment the next morning)
+- Pour the oil over the tofu and mix
+- In a separate bowl, mix the dry ingredients
+- Pour the dry mix over the tofu and mix again
+- Bake at 400°F for 29 minutes
+- The next morning, reheat at 300°F for 10 minutes while you make coffee
