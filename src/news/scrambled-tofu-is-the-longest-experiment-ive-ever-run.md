@@ -7,7 +7,9 @@ description: "Seven years and 1,300 bowls of scrambled tofu taught me more about
 og_image: "https://mobile1st.com/img/scrambled-tofu-breakfast.jpg"
 ---
 
-<img src="/img/scrambled-tofu-breakfast.jpg" alt="A plate of scrambled tofu next to a latte" style="width:100%;border-radius:8px;margin-bottom:1.5rem;">
+<img src="/img/scrambled-tofu-breakfast.jpg" alt="A plate of scrambled tofu next to a latte" style="width:100%;border-radius:8px;margin-bottom:0.5rem;">
+
+*Random photo from 2024, so pardon the mess on the table.*
 
 For seven years, my wife and I have eaten scrambled tofu for breakfast, Monday through Thursday. That's somewhere around 1,300 bowls.
 
