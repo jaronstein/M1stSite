@@ -5,6 +5,7 @@ date: 2026-10-14T12:00:00
 author: Justin Aronstein
 description: "Email teams tell a new story every week while the landing page stays the same, so the claims, offer and audience in the email go missing when the shopper clicks. Here's how to put them back."
 inline_cta: personalization
+og_image: "https://mobile1st.com/img/blog-header-email-promise-vs-page.jpg"
 ---
 
 Pull up the last email your team sent. Read it. Then click the button and read the page it takes you to.
@@ -28,6 +29,8 @@ So the email keeps moving and the page stays put.
 An auto parts brand sent an email titled "Is Your Transmission Cooler Trying to Tell You Something?" The pitch was simple: know the warning signs and replace your cooler before it leaves you on the side of the road. The email also promised a lifetime warranty with accident protection on every product, and 0% APR financing through PayPal or Klarna.
 
 The link went to the transmission cooler category page. The page had the right products and none of the rest. There was nothing about warning signs or breakdowns, no warranty, and no financing. The headline just said "Transmission & Oil Coolers."
+
+![The email promised warning signs, 0% APR financing and a lifetime warranty. The page it linked to was a plain category header.](/img/blog-header-email-promise-vs-page.jpg)
 
 Someone who clicked because they were worried about a breakdown, and who wanted to know they could spread the cost out, landed on a product grid and had to take it on faith.
 
