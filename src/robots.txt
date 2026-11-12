@@ -43,4 +43,3 @@ User-agent: OAI-SearchBot
 Allow: /
 
 Sitemap: https://mobile1st.com/sitemap.xml
-Sitemap: https://mobile1st.com/video-sitemap.xml

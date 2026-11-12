@@ -26,9 +26,21 @@ Then open http://localhost:8080 in a browser.
 | `npm run build` | Production build to `_site/` |
 | `npm run deploy` | Build + deploy to Cloudflare Pages via Wrangler |
 
-Push to `main` on GitHub triggers an automatic Cloudflare Pages build. The Wrangler config (`wrangler.jsonc`) points at `_site/` as the assets directory.
+Push to `main` on GitHub triggers an automatic Cloudflare build and deploy of the `m1stsite` Worker (routes included: see "Two hosts" below). The Wrangler config (`wrangler.jsonc`) points at `_site/` as the assets directory.
 
 A GitHub Actions workflow (`.github/workflows/rebuild-podcast.yml`) runs every Wednesday at 7 AM UTC, creating an empty commit to trigger a Cloudflare rebuild. This pulls the latest podcast episodes from the Castos RSS feed without any code changes.
+
+## Two hosts: mobile1st.com and throughlinecr.ai (2026-11-12)
+
+Mobile1st is now ThroughlineCR™. This one build serves two hosts through `worker.js`:
+
+- **mobile1st.com** keeps the agency pages: home (`src/index.njk`, which opens on "Mobile1st is now ThroughlineCR™" and points to throughlinecr.ai), `/about/`, `/quiz/`. Every page has the "Mobile1st is now ThroughlineCR™" banner (`base.njk`).
+- **throughlinecr.ai** gets the content that moved, at the same paths: `/news/`, `/podcast/`, `/pdp-audit/`, `/links/`, `/files/`, `/feed.xml`, `/video-sitemap.xml`, `/llms-full.txt`, and `/news/sitemap.xml`. The Worker routes in `wrangler.jsonc` send only those paths (plus `/img/ /css/ /js/ /fonts/`) here; everything else on throughlinecr.ai is the Railway app (`jaronstein/facebook-app`). **Never add a throughlinecr.ai route covering `/`, `/index*`, `/api*`, `/assets*`, `/sitemap.xml`, `/robots.txt` or `/llms.txt`.**
+- **Which host a page is on** comes from `site` data: `src/_data/site.js` sets Mobile1st for every page, and `src/{news,podcast,pdp-audit,links}/*.11tydata.js` override it with Throughline (`sites.js` holds both). `base.njk` picks the header, footer, favicon and default share image from `site.brand`, and every canonical / `og:url` / JSON-LD URL from `site.url`. A new section that belongs on throughlinecr.ai needs its own `*.11tydata.js` and a route.
+- **Links on a Throughline page to the app** (`/report`, `/how-it-works`, `/docs`, `/login`...) are written as full `https://throughlinecr.ai/...` URLs, and links to the agency pages as full `https://mobile1st.com/...` URLs, because a relative link resolves to the wrong place on the other host.
+- **Redirects:** with `vars.MOVE_REDIRECTS = "1"`, a GET/HEAD for a moved path on mobile1st.com answers ONE 301 to the same path on throughlinecr.ai (query kept; an old slug in `src/_redirects` goes straight to its final URL). `"0"` serves the moved pages on mobile1st.com as before: that is the rollback, a one-line change and a deploy.
+- `assets.run_worker_first` must stay `true`, or the static files answer before the Worker and the redirects never run.
+- `node scripts/test-worker.mjs` checks every host/path case; run it after any change to `worker.js` or `wrangler.jsonc` routes.
 
 ## File Map
 
@@ -212,14 +224,13 @@ Typography:
 
 ## Section Order (Homepage)
 
-1. Hero + Logo Bar
+1. Hero ("Mobile1st is now ThroughlineCR™", `#throughline`) + Logo Bar
 2. Problems (`#problems`) — WHERE THE MONEY IS GOING
-3. What We Do (`#what-we-do`) — WHAT WE DO
-4. Process (`#process`) — HOW WE WORK
-5. Results (`#results`) — WHAT THE DATA SAYS
-6. Products (`#products`) — THE PRODUCTS
-7. Fit (`#fit`) — IS THIS YOU?
-8. Final CTA
+3. Process (`#process`) — HOW WE WORK
+4. Results (`#results`) — WHAT THE DATA SAYS
+5. Products (`#products`) — THE PRODUCTS
+6. Fit (`#fit`) — IS THIS YOU?
+7. Final CTA
 
 ## Git Tips
 

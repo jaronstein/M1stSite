@@ -4,7 +4,7 @@ title: "Two Ads, One Landing Page, and a Rebuild That Only Worked for One of The
 date: 2026-08-27
 author: Justin Aronstein
 description: "A golf-apparel brand ran two ads to the same collection page. We rebuilt that page for both. Only one of them needed it, and that is the whole finding."
-og_image: "https://mobile1st.com/img/blog-header-two-ads-one-page.png"
+og_image: "https://throughlinecr.ai/img/blog-header-two-ads-one-page.png"
 inline_cta: experimentation
 ---
 

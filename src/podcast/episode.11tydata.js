@@ -15,7 +15,7 @@ module.exports = {
     },
     og_image: (data) => {
       const ep = data.episode;
-      return ep && ep.ogImage ? ep.ogImage : 'https://mobile1st.com/img/og-default.png';
+      return ep && ep.ogImage ? ep.ogImage : data.site.url + '/img/og-throughline.png';
     },
   },
 };

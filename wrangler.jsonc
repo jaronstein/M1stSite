@@ -1,14 +1,48 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "m1stsite",
+  "main": "worker.js",
   "compatibility_date": "2025-09-27",
+  "account_id": "4096e63a46508d32248cce14f4adcc1f",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "_site"
+    "directory": "_site",
+    "binding": "ASSETS",
+    // The Worker must run before the static files, or /news/x/index.html is served
+    // as-is on mobile1st.com and the 301s in worker.js never run.
+    "run_worker_first": true
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  // worker.js imports src/_redirects as text so a mobile1st.com slug redirect goes
+  // straight to its final throughlinecr.ai URL.
+  "rules": [
+    { "type": "Text", "globs": ["**/_redirects"], "fallthrough": true }
+  ],
+  "vars": {
+    // "1" = moved paths on mobile1st.com 301 to throughlinecr.ai. "0" = served here.
+    "MOVE_REDIRECTS": "0"
+  },
+  // mobile1st.com is the existing custom domain (listed so a deploy keeps it).
+  // On throughlinecr.ai ONLY the moved content and the build's static dirs come here;
+  // the Railway app owns everything else there. Never add a route covering /, /index*,
+  // /api*, /assets*, /sitemap.xml, /robots.txt or /llms.txt on that host.
+  "routes": [
+    { "pattern": "mobile1st.com", "custom_domain": true },
+    { "pattern": "throughlinecr.ai/news*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/podcast*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/pdp-audit*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/links*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/files/*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/img/*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/css/*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/js/*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/fonts/*", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/feed.xml", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/video-sitemap.xml", "zone_name": "throughlinecr.ai" },
+    { "pattern": "throughlinecr.ai/llms-full.txt", "zone_name": "throughlinecr.ai" }
   ]
 }

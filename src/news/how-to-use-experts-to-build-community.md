@@ -4,7 +4,7 @@ title: "How to Use Experts to Build Community"
 date: 2026-04-15
 author: Justin Aronstein
 description: "BPN didn't try to build a community for everyone. They built an event for the experts and let everyone else watch. Here's what that looks like and how to replicate it."
-og_image: "https://mobile1st.com/img/go-one-more-backyard-ultra.jpg"
+og_image: "https://throughlinecr.ai/img/go-one-more-backyard-ultra.jpg"
 inline_cta: none
 ---
 

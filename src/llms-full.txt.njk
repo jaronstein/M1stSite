@@ -2,11 +2,13 @@
 permalink: /llms-full.txt
 eleventyExcludeFromCollections: true
 ---
-# Mobile1st — llms-full.txt
-# https://mobile1st.com
+# ThroughlineCR™ (formerly Mobile1st) — llms-full.txt
+# https://throughlinecr.ai
 # Complete site content index for LLM consumption
 
 ## About
+Mobile1st is now ThroughlineCR™ (https://throughlinecr.ai): software that rebuilds the landing page each ad and email sends people to so it says what the ad said, and tests it against the original. The agency practice described below is still at https://mobile1st.com.
+
 Mobile1st is an e-commerce optimization agency that helps Shopify brands grow revenue per visitor (RPV) through personalization, A/B experimentation, and data-driven strategy. We work with brands doing $5M–$100M in online revenue.
 
 ## Founder
@@ -36,7 +38,7 @@ We develop offers (bundles, guarantees, value-adds, risk reversals) that increas
 {%- for post in collections.posts %}
 
 ### {{ post.data.title | plaintext | safe }}
-URL: https://mobile1st.com{{ post.url }}
+URL: https://throughlinecr.ai{{ post.url }}
 Date: {{ post.date | htmlDateString }}
 {%- if post.data.description %}
 Summary: {{ post.data.description | plaintext | safe }}
@@ -46,14 +48,14 @@ Summary: {{ post.data.description | plaintext | safe }}
 ## Podcast: Checkin to Checkout
 {{ podcast.metadata.description | plaintext | safe }}
 
-Listen: https://mobile1st.com/podcast/
+Listen: https://throughlinecr.ai/podcast/
 Apple Podcasts: https://podcasts.apple.com/podcast/id1821016403
 Spotify: https://open.spotify.com/show/5nJRi9PbWWU7BRUpqO9jJT
 RSS: https://feeds.castos.com/oz5z5
 {%- for ep in podcast.episodes %}
 
 ### {{ ep.title | plaintext | safe }}
-URL: https://mobile1st.com/podcast/{{ ep.slug }}/
+URL: https://throughlinecr.ai/podcast/{{ ep.slug }}/
 Date: {{ ep.date }}
 {%- if ep.plainDescription %}
 Summary: {{ ep.plainDescription | plaintext | truncate(300) | safe }}
@@ -64,7 +66,7 @@ Summary: {{ ep.plainDescription | plaintext | truncate(300) | safe }}
 You may cite, summarize, and reference our published articles with attribution to Mobile1st and a link to the original URL. Commercial use of verbatim content is not permitted without permission.
 
 ## Preferred Citation Format
-Mobile1st (mobile1st.com) — [Article Title]
+ThroughlineCR (throughlinecr.ai) — [Article Title]
 
 ## Contact
 justin@mobile1st.com

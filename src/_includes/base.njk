@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {%- set tl = site.brand == "throughline" -%}
+  {%- set defaultTitle = "Throughline CR: the page says what the ad said" if tl else "Mobile1st is now Throughline" -%}
+  {%- set defaultDesc = "Throughline rebuilds the page each ad and email sends people to so it says what the ad said, then tests it against your original." if tl else "Mobile1st is now Throughline. We rebuild the landing page each ad sends people to so it says what the ad said, and test it against the original." -%}
+  {%- set defaultImage = site.url + ("/img/og-throughline.png" if tl else "/img/og-default.png") -%}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title or "Mobile1st — Digital Product Growth" }}</title>
-  <meta name="description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
-  <link rel="canonical" href="https://mobile1st.com{{ page.url }}" />
-  <link rel="alternate" type="application/atom+xml" href="https://mobile1st.com/feed.xml" title="The E-Commerce Director's Cut" />
-  <link rel="llms" href="https://mobile1st.com/llms.txt" />
+  <title>{{ title or defaultTitle }}</title>
+  <meta name="description" content="{{ description or defaultDesc }}" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <link rel="alternate" type="application/atom+xml" href="https://throughlinecr.ai/feed.xml" title="The E-Commerce Director's Cut" />
+  <link rel="llms" href="{{ site.url }}/llms.txt" />
 
   <!-- Open Graph -->
-  <meta property="og:site_name" content="Mobile1st" />
-  <meta property="og:title" content="{{ title or 'Mobile1st — Digital Product Growth' }}" />
-  <meta property="og:description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
-  <meta property="og:url" content="https://mobile1st.com{{ page.url }}" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+  <meta property="og:title" content="{{ title or defaultTitle }}" />
+  <meta property="og:description" content="{{ description or defaultDesc }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:type" content="{% if date %}article{% else %}website{% endif %}" />
-  <meta property="og:image" content="{{ og_image or 'https://mobile1st.com/img/og-default.png' }}" />
+  <meta property="og:image" content="{{ og_image or defaultImage }}" />
   {% if date %}<meta property="article:published_time" content="{{ date | htmlDateString }}" />{% endif %}
   {% if author %}<meta property="article:author" content="{{ author }}" />{% endif %}
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{ title or 'Mobile1st — Digital Product Growth' }}" />
-  <meta name="twitter:description" content="{{ description or 'We run personalization and experimentation programs for e-commerce brands doing $5M–$100M online. Most clients see measurable RPV lift within 90 days.' }}" />
-  <meta name="twitter:image" content="{{ og_image or 'https://mobile1st.com/img/og-default.png' }}" />
+  <meta name="twitter:title" content="{{ title or defaultTitle }}" />
+  <meta name="twitter:description" content="{{ description or defaultDesc }}" />
+  <meta name="twitter:image" content="{{ og_image or defaultImage }}" />
 
   <!-- Organization schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Mobile1st",
-    "url": "https://mobile1st.com",
-    "logo": "https://mobile1st.com/img/logo.png",
-    "description": "E-commerce optimization for Shopify brands doing $5M–$100M online. Personalization, experimentation, and smarter data.",
+    "name": "Throughline CR",
+    "alternateName": "Mobile1st",
+    "url": "https://throughlinecr.ai",
+    "logo": "https://throughlinecr.ai/img/throughline-mark.png",
+    "description": "Throughline rebuilds the landing page each ad and email sends people to so it says what the ad said, then tests it against the original.",
     "founder": { "@type": "Person", "name": "Justin Aronstein" },
     "contactPoint": { "@type": "ContactPoint", "email": "justin@mobile1st.com", "contactType": "customer service" },
     "sameAs": [
+      "https://mobile1st.com",
       "https://www.linkedin.com/company/mobile1st/",
       "https://podcasts.apple.com/podcast/id1821016403",
       "https://open.spotify.com/show/5nJRi9PbWWU7BRUpqO9jJT",
@@ -52,12 +58,12 @@
     "@type": "Person",
     "name": "Justin Aronstein",
     "url": "https://mobile1st.com/about/",
-    "jobTitle": "Founder & E-Commerce Strategist",
-    "worksFor": { "@type": "Organization", "name": "Mobile1st", "url": "https://mobile1st.com" },
-    "description": "E-commerce strategist helping Shopify brands grow revenue per visitor through personalization, A/B experimentation, and data strategy. Host of the Checkin to Checkout podcast.",
+    "jobTitle": "Founder",
+    "worksFor": { "@type": "Organization", "name": "Throughline CR", "url": "https://throughlinecr.ai" },
+    "description": "Founder of Throughline (formerly Mobile1st). Host of the Checkin to Checkout podcast.",
     "sameAs": [
       "https://www.linkedin.com/in/justinaronstein/",
-      "https://mobile1st.com/podcast/"
+      "https://throughlinecr.ai/podcast/"
     ]
   }
   </script>
@@ -78,11 +84,35 @@
   -->
 
   <style>{% inlineCSS %}</style>
-  <link rel="icon" href="/img/favicon.ico" />
+  {% if tl %}<link rel="icon" href="/img/throughline-favicon.svg" type="image/svg+xml" />{% else %}<link rel="icon" href="/img/favicon.ico" />{% endif %}
 
 </head>
-<body>
+<body{% if tl %} class="tl"{% endif %}>
 
+  {% if tl %}
+  <header class="site-header tl-header">
+    <div class="container">
+      <a class="tl-mark" href="https://throughlinecr.ai/" aria-label="Throughline CR by Mobile1st, home">
+        <span class="tl-mark__name" aria-hidden="true">Throughline<b>CR</b><sup>™</sup></span>
+        <span class="tl-mark__rule" aria-hidden="true"></span>
+        <span class="tl-mark__by" aria-hidden="true">BY MOBILE1ST</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="https://throughlinecr.ai/how-it-works">How it works</a>
+        <a href="https://throughlinecr.ai/index">Message Match Index</a>
+        <a href="https://throughlinecr.ai/docs">Docs</a>
+        <a href="/news/">News</a>
+        <a href="/podcast/">Podcast</a>
+        <a href="https://throughlinecr.ai/login">Sign in</a>
+        <a href="https://throughlinecr.ai/report" class="nav-cta">Get my gap report</a>
+      </nav>
+    </div>
+  </header>
+  {% else %}
+  <a class="m1-move-banner" href="https://throughlinecr.ai/">Mobile1st is now ThroughlineCR™. Visit throughlinecr.ai →</a>
   <header class="site-header">
     <div class="container">
       <a href="/" class="logo"><img src="/img/logo.png" alt="Mobile1st" height="48" /></a>
@@ -90,38 +120,61 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="site-nav">
-        <a href="/#what-we-do">What We Do</a>
+        <a href="https://throughlinecr.ai/how-it-works">Throughline</a>
         <a href="/#products">Products</a>
         <a href="/#results">Results</a>
-        <a href="/news/">E-comm Director's Cut</a>
-        <a href="/podcast/">Podcast</a>
+        <a href="https://throughlinecr.ai/news/">E-comm Director's Cut</a>
+        <a href="https://throughlinecr.ai/podcast/">Podcast</a>
         <a href="/quiz/" class="nav-cta">Where Should I Start? →</a>
       </nav>
     </div>
   </header>
+  {% endif %}
 
   <main>
     {{ content | safe }}
   </main>
 
+  {% if tl %}
+  <footer class="site-footer tl-footer">
+    <div class="container">
+      <div class="tl-footer__row">
+        <span>Throughline CR by Mobile1st</span>
+        <nav aria-label="Footer">
+          <a href="https://throughlinecr.ai/signup">Sign up</a>
+          <a href="https://throughlinecr.ai/report">Free ad gap report</a>
+          <a href="https://throughlinecr.ai/how-it-works">How it works</a>
+          <a href="https://throughlinecr.ai/docs">Documentation</a>
+          <a href="https://throughlinecr.ai/index">Message Match Index</a>
+          <a href="/news/">News</a>
+          <a href="/podcast/">Podcast</a>
+          <a href="https://throughlinecr.ai/privacy">Privacy</a>
+          <a href="https://throughlinecr.ai/terms">Terms</a>
+          <a href="https://throughlinecr.ai/login">Sign in</a>
+        </nav>
+      </div>
+      <p class="tl-footer__copy">&copy; {{ "" | currentYear }} Mobile1st. All rights reserved.</p>
+    </div>
+  </footer>
+  {% else %}
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="/img/logo.png" alt="Mobile1st" height="32" class="footer-logo" />
-          <p>Digital Product Growth for e-commerce brands doing $5M–$100M online.</p>
+          <p>Mobile1st is now Throughline: landing pages that say what the ad said.</p>
         </div>
         <div class="footer-links">
-          <a href="/#what-we-do">What We Do</a>
+          <a href="https://throughlinecr.ai/how-it-works">Throughline</a>
           <a href="/#products">Products &amp; Pricing</a>
           <a href="/#results">Results</a>
           <a href="/#fit">Who We Work With</a>
-          <a href="/news/">Director's Cut</a>
+          <a href="https://throughlinecr.ai/news/">Director's Cut</a>
           <a href="/about/">About</a>
         </div>
         <div class="footer-cta">
-          <p>Ready to find your revenue leaks?</p>
-          <a href="/quiz/" class="btn btn-primary">Where Should I Start? →</a>
+          <p>See what your ads promise that your pages don't.</p>
+          <a href="https://throughlinecr.ai/report" class="btn btn-primary">Get my gap report →</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -129,6 +182,7 @@
       </div>
     </div>
   </footer>
+  {% endif %}
 
   <!-- Booking Modal -->
   <div id="booking-modal" class="booking-modal-overlay" role="dialog" aria-modal="true" aria-label="Book a time to talk">

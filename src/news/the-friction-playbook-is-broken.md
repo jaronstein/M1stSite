@@ -6,7 +6,7 @@ author: Justin Aronstein
 description: "Removing friction stopped working. Here's why the demand capture era is over — and what the brands actually growing right now are doing differently."
 podcast_episode_id: 2399119
 inline_cta: experimentation
-og_image: https://mobile1st.com/img/friction-squeeze-chart.png
+og_image: https://throughlinecr.ai/img/friction-squeeze-chart.png
 ---
 
 For a solid decade, e-commerce had one job: remove friction.

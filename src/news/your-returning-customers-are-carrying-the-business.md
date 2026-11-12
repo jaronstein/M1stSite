@@ -4,7 +4,7 @@ title: "Your Returning Customers Are Carrying the Business. You've Never Asked T
 date: 2026-07-15
 author: Justin Aronstein
 description: "20% of sessions. 77% of revenue. And most brands still treat every visitor the same."
-og_image: "https://mobile1st.com/img/blog-header-returning-visitors-stat.png"
+og_image: "https://throughlinecr.ai/img/blog-header-returning-visitors-stat.png"
 inline_cta: zero-party
 ---
 

@@ -5,7 +5,7 @@ date: 2026-10-21T12:00:00
 author: Justin Aronstein
 description: "Demand gen can launch forty Black Friday ads in an afternoon, but the pages they open stay frozen until the web team gets to them. Here's how one DTC brand is closing that gap before the sale."
 inline_cta: personalization
-og_image: "https://mobile1st.com/img/black-friday-bogo-ad-vs-page.png"
+og_image: "https://throughlinecr.ai/img/black-friday-bogo-ad-vs-page.png"
 ---
 
 ![Two phones side by side. On the left, a Black Friday ad that says "Buy one, get one." On the right, the page it opens: a fall collection with no mention of the sale.](/img/black-friday-bogo-ad-vs-page.png)

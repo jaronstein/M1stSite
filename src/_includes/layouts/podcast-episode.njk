@@ -9,7 +9,7 @@ layout: base.njk
   "name": {{ episode.title | dump | safe }},
   "description": {{ episode.plainDescription | dump | safe }},
   "datePublished": "{{ episode.date }}",
-  "url": "https://mobile1st.com/podcast/{{ episode.slug }}/",
+  "url": "{{ site.url }}/podcast/{{ episode.slug }}/",
   {% if episode.image %}"image": {{ episode.image | dump | safe }},{% endif %}
   {% if episode.duration %}"timeRequired": "PT{{ episode.duration | durationToSeconds }}S",{% endif %}
   "associatedMedia": {
@@ -24,8 +24,8 @@ layout: base.njk
   "partOfSeries": {
     "@type": "PodcastSeries",
     "name": "Checkin to Checkout",
-    "url": "https://mobile1st.com/podcast/",
-    "image": "https://mobile1st.com/img/og-default.png",
+    "url": "{{ site.url }}/podcast/",
+    "image": "{{ site.url }}/img/og-throughline.png",
     "author": {
       "@type": "Person",
       "name": "Justin Aronstein",
@@ -46,10 +46,10 @@ layout: base.njk
   "contentUrl": {{ episode.audioUrl | dump | safe }},
   "publisher": {
     "@type": "Organization",
-    "name": "Mobile1st",
+    "name": "Throughline CR",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://mobile1st.com/img/logo.png"
+      "url": "https://throughlinecr.ai/img/throughline-mark.png"
     }
   }
 }
