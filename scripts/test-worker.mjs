@@ -23,7 +23,10 @@ globalThis.fetch = async (req) => {
   return new Response("origin:" + new URL(req.url).pathname, { status: 200 });
 };
 const { default: worker } = await import(pathToFileURL(tmp).href);
-const ASSETS = { fetch: async (req) => new Response("asset:" + new URL(req.url).pathname, { status: 200 }) };
+const ASSETS = { fetch: async (req) => {
+  const path = new URL(req.url).pathname;
+  return path.includes("missing") ? new Response("nope", { status: 404 }) : new Response("asset:" + path, { status: 200 });
+} };
 
 async function run(url, { method = "GET", flag = "1" } = {}) {
   const res = await worker.fetch(new Request(url, { method, redirect: "manual" }), { ASSETS, MOVE_REDIRECTS: flag });
@@ -65,6 +68,8 @@ const cases = [
   ["https://throughlinecr.ai/img/og-throughline.png", {}, { status: 200, body: "asset:/img/og-throughline.png" }],
   ["https://throughlinecr.ai/css/style.css", {}, { status: 200, body: "asset:/css/style.css" }],
   ["https://throughlinecr.ai/news/b2b-segmentation-f8lc4/?a=1", {}, { status: 301, location: "https://throughlinecr.ai/news/most-valuable-customers/?a=1" }],
+  ["https://throughlinecr.ai/img/missing.png", {}, { status: 200, body: "origin:/img/missing.png" }],
+  ["https://throughlinecr.ai/news/missing/", {}, { status: 404 }],
   // throughlinecr.ai: anything else goes to the app
   ["https://throughlinecr.ai/newsletter", {}, { status: 200, body: "origin:/newsletter" }],
   ["https://throughlinecr.ai/", {}, { status: 200, body: "origin:/" }],

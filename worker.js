@@ -68,7 +68,10 @@ export default {
       if (isMoved(path) || isStatic(path)) {
         const slug = readOnly && SLUGS.get(path);
         if (slug) return redirect(CANONICAL + slug + url.search);
-        return env.ASSETS.fetch(request);
+        const res = await env.ASSETS.fetch(request);
+        // A static path the build doesn't have may still be the app's: let it answer.
+        if (res.status === 404 && isStatic(path)) return fetch(request);
+        return res;
       }
       return fetch(request); // the app (Railway) owns the rest of throughlinecr.ai
     }
