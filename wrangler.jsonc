@@ -24,7 +24,7 @@
   ],
   "vars": {
     // "1" = moved paths on mobile1st.com 301 to throughlinecr.ai. "0" = served here.
-    "MOVE_REDIRECTS": "0"
+    "MOVE_REDIRECTS": "1"
   },
   // mobile1st.com is the existing custom domain (listed so a deploy keeps it).
   // On throughlinecr.ai ONLY the moved content and the build's static dirs come here;
