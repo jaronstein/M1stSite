@@ -5,7 +5,7 @@ date: 2026-05-20
 author: Justin Aronstein
 description: "Product recommendation sliders are the wrong tool for the job. Here's why category-routing beats single-item guessing, and the 4.5% RPV lift to prove it."
 inline_cta: experimentation
-og_image: https://mobile1st.com/img/blog-header-recommendation-slider.png
+og_image: https://throughlinecr.ai/img/blog-header-recommendation-slider.png
 ---
 
 ![Aura Essentials PDP for the Ultimate Hydration Serum, displayed on an iMac sitting on a desk next to a fern.](/img/blog-header-recommendation-slider.png)

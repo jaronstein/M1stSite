@@ -5,7 +5,7 @@ date: 2026-03-26T12:00:00
 author: Justin Aronstein
 description: "Six practical habits that keep Directors of E-Commerce employed: weekly Slack updates, pre-announcing bad news, and building a win inventory before you need it."
 podcast_episode_id: 2404617
-og_image: https://mobile1st.com/img/managing-up-link-preview.png
+og_image: https://throughlinecr.ai/img/managing-up-link-preview.png
 ---
 
 On this week's Checkin to Checkout, Lauren Goodwin joins Justin to dig into the question every e-commerce brand needs to answer before any tactic makes sense: why you, why now? If you're building the case internally for where to invest next, it's worth a listen before you keep reading.

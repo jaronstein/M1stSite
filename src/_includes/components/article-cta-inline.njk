@@ -5,7 +5,9 @@
   },
   "personalization": {
     "line": "Your ads are working. Your landing page is undoing them.",
-    "sub": "Ad-to-Page Content Personalization fixes the mismatch between what your ad promised and what your page delivers."
+    "sub": "ThroughlineCR™ rebuilds the page each ad sends people to so it says what the ad said, then tests it against yours.",
+    "href": "https://throughlinecr.ai/report",
+    "cta": "Get my free gap report"
   },
   "discovery": {
     "line": "60% of your traffic lands on one PDP and can't find what they need.",
@@ -28,5 +30,6 @@
 <aside class="inline-cta inline-cta--{{ cta_type }}">
   <p class="inline-cta__line">{{ cta_map[cta_type].line }}</p>
   <p class="inline-cta__sub">{{ cta_map[cta_type].sub }}</p>
-  <a href="/quiz/" class="inline-cta__link">Take the quiz</a>
+  {# On throughlinecr.ai /quiz/ is the app, so the agency quiz is linked on its own host. #}
+  <a href="{{ cta_map[cta_type].href or 'https://mobile1st.com/quiz/' }}" class="inline-cta__link">{{ cta_map[cta_type].cta or 'Take the quiz' }}</a>
 </aside>

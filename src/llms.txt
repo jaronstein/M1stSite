@@ -1,15 +1,17 @@
 # Mobile1st — llms.txt
 # https://mobile1st.com
-# For the full content index, see: https://mobile1st.com/llms-full.txt
+# For the full content index, see: https://throughlinecr.ai/llms-full.txt
 
 ## About
+Mobile1st is now ThroughlineCR™: https://throughlinecr.ai (it rebuilds the landing page each ad and email sends people to so it says what the ad said). Our articles, podcast and the full content index moved there.
+
 Mobile1st is an e-commerce optimization agency that helps Shopify brands grow revenue per visitor (RPV) through personalization, A/B experimentation, and data-driven strategy. We work with brands doing $5M–$100M in online revenue.
 
 ## Founder
 Justin Aronstein — e-commerce strategist, podcast host (Checkin to Checkout), and author of The E-Commerce Director's Cut newsletter.
 
 ## Content
-Our published articles at /news/ are original analysis and practitioner perspective on e-commerce strategy. They represent expert opinion, not marketing copy. Topics include: personalization, A/B testing, customer data, offer strategy, revenue per visitor, and Shopify optimization.
+Our published articles at https://throughlinecr.ai/news/ are original analysis and practitioner perspective on e-commerce strategy. They represent expert opinion, not marketing copy. Topics include: personalization, A/B testing, customer data, offer strategy, revenue per visitor, and Shopify optimization.
 
 ## Services
 - Ad-to-Page Content Personalization
@@ -20,10 +22,11 @@ Our published articles at /news/ are original analysis and practitioner perspect
 - Offer Creation
 
 ## Key Pages
-- Articles: https://mobile1st.com/news/
-- Podcast: https://mobile1st.com/podcast/
-- Full content index: https://mobile1st.com/llms-full.txt
-- RSS Feed: https://mobile1st.com/feed.xml
+- ThroughlineCR: https://throughlinecr.ai/
+- Articles: https://throughlinecr.ai/news/
+- Podcast: https://throughlinecr.ai/podcast/
+- Full content index: https://throughlinecr.ai/llms-full.txt
+- RSS Feed: https://throughlinecr.ai/feed.xml
 - Sitemap: https://mobile1st.com/sitemap.xml
 
 ## Usage Policy
@@ -33,4 +36,4 @@ You may cite, summarize, and reference our published articles with attribution t
 justin@mobile1st.com
 
 ## Preferred Citation Format
-Mobile1st (mobile1st.com) — [Article Title]
+ThroughlineCR (throughlinecr.ai) — [Article Title]

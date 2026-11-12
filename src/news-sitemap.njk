@@ -1,0 +1,40 @@
+---
+permalink: /news/sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+{#- Served on throughlinecr.ai (worker.js routes /news* to this build). The app's
+    robots.txt names it; the app owns /sitemap.xml itself. -#}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://throughlinecr.ai/news/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {%- for post in collections.posts %}
+  <url>
+    <loc>https://throughlinecr.ai{{ post.url }}</loc>
+    <lastmod>{{ post.date | htmlDateString }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
+  <url>
+    <loc>https://throughlinecr.ai/podcast/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {%- for ep in podcast.episodes %}
+  <url>
+    <loc>https://throughlinecr.ai/podcast/{{ ep.slug }}/</loc>
+    <lastmod>{{ ep.date }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
+  <url>
+    <loc>https://throughlinecr.ai/pdp-audit/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

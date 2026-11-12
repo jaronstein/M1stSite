@@ -5,7 +5,7 @@ date: 2026-10-28T12:00:00
 author: Justin Aronstein
 description: "One ad, 20 versions of primary text, and Meta gave two of them 85% of the impressions. How Meta picks which version runs, and seven steps to find and replace the ones it's ignoring."
 inline_cta: personalization
-og_image: "https://mobile1st.com/img/blog-header-meta-picks-one.png"
+og_image: "https://throughlinecr.ai/img/blog-header-meta-picks-one.png"
 ---
 
 ![A bar chart of one Meta ad's 20 versions of primary text. Version 1 got 61% of impressions, version 2 got 24%, and 15 of the 20 got under 1% each.](/img/blog-header-meta-picks-one.png)

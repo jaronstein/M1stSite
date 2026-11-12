@@ -5,7 +5,7 @@ date: 2026-10-14T12:00:00
 author: Justin Aronstein
 description: "Email teams tell a new story every week while the landing page stays the same, so the claims, offer and audience in the email go missing when the shopper clicks. Here's how to put them back."
 inline_cta: personalization
-og_image: "https://mobile1st.com/img/email-promise-vs-landing-page.jpg"
+og_image: "https://throughlinecr.ai/img/email-promise-vs-landing-page.jpg"
 ---
 
 Pull up the last email your team sent. Read it. Then click the button and read the page it takes you to.

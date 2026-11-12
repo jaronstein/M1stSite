@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
   {%- for ep in podcast.episodes %}
   {%- if ep.audioType === "video/mp4" and ep.audioUrl and ep.slug %}
   <url>
-    <loc>https://mobile1st.com/podcast/{{ ep.slug }}/</loc>
+    <loc>https://throughlinecr.ai/podcast/{{ ep.slug }}/</loc>
     <video:video>
       <video:thumbnail_loc>{{ ep.ogImage }}</video:thumbnail_loc>
       <video:title>{{ ep.title | escape }}</video:title>

@@ -4,7 +4,7 @@ title: "Half Your Meta Ad Clicks Might Not Go Where You Think"
 date: 2026-08-12
 author: Justin Aronstein
 description: "Product extensions quietly take a huge share of your paid traffic and send it to pages you never built for the campaign. Here's what 122 ads and $270k in spend say about where those clicks go."
-og_image: "https://mobile1st.com/img/blog-header-meta-product-extensions.png"
+og_image: "https://throughlinecr.ai/img/blog-header-meta-product-extensions.png"
 ---
 
 <aside class="promo-callout">

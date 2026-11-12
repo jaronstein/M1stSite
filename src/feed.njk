@@ -3,11 +3,13 @@ permalink: /feed.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
+{#- Atom <id>s stay on mobile1st.com on purpose: they are permanent identifiers, and
+    changing them makes every reader treat all posts as new. Links point to throughlinecr.ai. -#}
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>The E-Commerce Director's Cut</title>
   <subtitle>The stuff no one says in the agency deck. Weekly. Free.</subtitle>
-  <link href="https://mobile1st.com/feed.xml" rel="self"/>
-  <link href="https://mobile1st.com/"/>
+  <link href="https://throughlinecr.ai/feed.xml" rel="self"/>
+  <link href="https://throughlinecr.ai/"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>https://mobile1st.com/</id>
   <author>
@@ -17,12 +19,12 @@ eleventyExcludeFromCollections: true
   {%- for post in collections.posts | reverse %}
   <entry>
     <title>{{ post.data.title }}</title>
-    <link href="https://mobile1st.com{{ post.url }}"/>
+    <link href="https://throughlinecr.ai{{ post.url }}"/>
     <id>https://mobile1st.com{{ post.url }}</id>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <published>{{ post.date | dateToRfc3339 }}</published>
     {% if post.data.description %}<summary>{{ post.data.description }}</summary>{% endif %}
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls("https://mobile1st.com") | escape }}</content>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls("https://throughlinecr.ai") | escape }}</content>
   </entry>
   {%- endfor %}
 </feed>

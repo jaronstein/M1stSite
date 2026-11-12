@@ -4,7 +4,7 @@ title: "Mend The Gap: The Hierarchy of Message Match"
 date: 2026-08-19
 author: Justin Aronstein
 description: "Message match isn't one thing you either do or don't. It's five things in a fixed order, and most teams are working on the rung that matters least."
-og_image: "https://mobile1st.com/img/message-match-hierarchy.png"
+og_image: "https://throughlinecr.ai/img/message-match-hierarchy.png"
 inline_cta: personalization
 ---
 

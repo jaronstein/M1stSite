@@ -3,6 +3,8 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
+{#- mobile1st.com's own pages only. News, podcast and pdp-audit live on throughlinecr.ai
+    since 2026-11-12 and are listed in /news/sitemap.xml there. -#}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mobile1st.com/</loc>
@@ -10,34 +12,13 @@ eleventyExcludeFromCollections: true
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mobile1st.com/news/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://mobile1st.com/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mobile1st.com/quiz/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  {%- for post in collections.posts %}
-  <url>
-    <loc>https://mobile1st.com{{ post.url }}</loc>
-    <lastmod>{{ post.date | htmlDateString }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  {%- endfor %}
-  <url>
-    <loc>https://mobile1st.com/podcast/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  {%- for ep in podcast.episodes %}
-  <url>
-    <loc>https://mobile1st.com/podcast/{{ ep.slug }}/</loc>
-    <lastmod>{{ ep.date }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  {%- endfor %}
 </urlset>

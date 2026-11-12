@@ -4,7 +4,7 @@ title: "The Message-Match Gap: What the Best DTC Stores Do That the Worst Don't"
 date: 2026-07-23
 author: Justin Aronstein
 description: "Every marketer obsesses over the ad. Then the click lands on a page that has almost nothing to do with it, and the sale quietly disappears."
-og_image: "https://mobile1st.com/img/message-match-quince-page.jpg"
+og_image: "https://throughlinecr.ai/img/message-match-quince-page.jpg"
 ---
 
 We call the distance between what an ad promises and what its landing page delivers the **message-match gap**. To see how much it actually costs brands, we analyzed the Meta advertising of 22 leading DTC brands: reading what each ad promises (the words baked into the creative, the words spoken in the video) and checking, piece by piece, whether the destination page delivers it.

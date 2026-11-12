@@ -20,9 +20,9 @@ layout: base.njk
   "description": {{ description | dump | safe }},
   "datePublished": "{{ date | htmlDateString }}",
   "author": { "@type": "Person", "name": "{{ author or 'Justin Aronstein' }}" },
-  "publisher": { "@type": "Organization", "name": "Mobile1st", "logo": { "@type": "ImageObject", "url": "https://mobile1st.com/img/logo.png" } },
-  "url": "https://mobile1st.com{{ page.url }}",
-  "image": "{{ og_image or 'https://mobile1st.com/img/og-default.png' }}"
+  "publisher": { "@type": "Organization", "name": "Throughline CR", "logo": { "@type": "ImageObject", "url": "https://throughlinecr.ai/img/throughline-mark.png" } },
+  "url": "{{ site.url }}{{ page.url }}",
+  "image": "{{ og_image or site.url + '/img/og-throughline.png' }}"
 }
 </script>
 

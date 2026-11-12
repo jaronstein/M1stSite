@@ -4,7 +4,7 @@ title: "Scrambled Tofu Is the Longest Experiment I've Ever Run"
 date: 2026-09-23T12:00:00
 author: Justin Aronstein
 description: "Seven years and 1,300 bowls of scrambled tofu taught me more about running experiments than most A/B tests have: run it long enough to trust your reaction, change enough to notice, and don't be afraid to touch more than one thing at once."
-og_image: "https://mobile1st.com/img/scrambled-tofu-breakfast.jpg"
+og_image: "https://throughlinecr.ai/img/scrambled-tofu-breakfast.jpg"
 ---
 
 <img src="/img/scrambled-tofu-breakfast.jpg" alt="A plate of scrambled tofu next to a latte" style="width:100%;border-radius:8px;margin-bottom:0.5rem;">
