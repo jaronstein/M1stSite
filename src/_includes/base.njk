@@ -228,16 +228,15 @@ document.head.appendChild(o)}initApollo();</script>
   <!-- Google Analytics 4: property "throughlinecr.ai" (G-CDEYGM2WTK), the same one the app on
        throughlinecr.ai reports to (facebook-app frontend/src/lib/googleAnalytics.ts, keep the two
        in step). throughlinecr.ai pages only, and only on that host (not workers.dev or local).
-       Google sees the page address with only utm_*, gclid and v kept: no email or name a
-       link might carry, no fragment. Google signals and ad personalization are off. -->
+       gtag.js sends the page view with the real address whatever page_location says (measured
+       2026-11-13), so the query is cleaned by the stream's "Redact data" settings in GA admin
+       (email values, plus the keys email, name, website, company, ads, page, phone, token,
+       m1_preview, m1_edit). Google signals and ad personalization are off. -->
   <script>(function(){var id="G-CDEYGM2WTK",h=location.hostname;
 if(h!=="throughlinecr.ai"&&h!=="www.throughlinecr.ai")return;
-var q=new URLSearchParams(location.search),k=new URLSearchParams();
-q.forEach(function(v,n){if(/^(utm_[a-z_]+|gclid|v)$/.test(n))k.append(n,v)});
-var loc=location.origin+location.pathname+(k.toString()?"?"+k.toString():"");
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;
 gtag("js",new Date());
-gtag("config",id,{page_location:loc,allow_google_signals:false,allow_ad_personalization_signals:false});
+gtag("config",id,{allow_google_signals:false,allow_ad_personalization_signals:false});
 var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+id;document.head.appendChild(s)})();</script>
   {%- endif %}
 </body>
